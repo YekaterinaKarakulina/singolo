@@ -27,6 +27,7 @@ body {
 .slider-top {
     position: relative;
     top: -6px;
+    z-index: ;
     bottom: 0px;
     height: 600px;
     background-color: #f06c64; 
@@ -102,20 +103,42 @@ body {
     color: #323746;
   }
 
-  .phone {
-      position: absolute;
+  
+
+  .phone__shadow__vertical {
+    position: absolute;
+    
+      top: 59px;
+      left: 111px;  
   }
 
-  .phone__vertical {
+ 
+
+  .phone__shadow__horizontal {
+    position: absolute;
+    transform: rotate(270deg);
+    top: 48px;
+    left: 510px;
+}
+
+.phone__base__vertical {
+    z-index: 2;
+    position: absolute;
       top: 59px;
       left: 111px;
   }
+  
 
-  .phone__horizontal {
+
+  .phone__base__horizontal {
+    position: absolute;
+    z-index: 2;
     transform: rotate(90deg);
     top: 48px;
     left: 535px;
 }
+
+
 
 
 
