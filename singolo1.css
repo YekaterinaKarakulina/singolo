@@ -27,7 +27,7 @@ body {
 .slider-top {
     position: relative;
     top: -6px;
-    z-index: ;
+    
     bottom: 0px;
     height: 600px;
     background-color: #f06c64; 
@@ -85,7 +85,7 @@ body {
     display: inline-block;
     font-size: 12px;
     line-height: 6px;
-    color: #ffffff;
+    
     font-weight: 700;
     text-align: center;
     list-style: none;
@@ -94,6 +94,11 @@ body {
 
 .navigation-list li{
     display: inline;
+    color: #ffffff;
+}
+
+.navigation-list li:hover{
+    color: #f06c64;
 }
 
   .navigation-list li::after {
@@ -166,6 +171,38 @@ body {
     top: 59px;
     left: 548px;
 }
+
+.arrow__left {
+    background: url(/assets/chev.svg);
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+ z-index: 5;
+ top: 287px;
+ left: 42px;
+cursor: pointer;
+}
+
+.arrow__left:hover {
+   cursor: progress;
+}
+
+.arrow__right {
+    background: url(/assets/chev.svg);
+    background-size: contain;
+    display: inline-block;
+    position: absolute;
+    transform: rotate(180deg);
+ z-index: 5;
+ top: 285px;
+    left: 964px;
+
+cursor: pointer;
+}
+
+.arrow__right:hover {
+    cursor: progress;
+ }
 
 
 
