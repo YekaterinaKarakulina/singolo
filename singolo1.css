@@ -52,9 +52,7 @@ body {
     height: 6px;
 }
 
-.services-title {
-    margin: 0px;
-}
+
 
 .logo {
     display: inline-block;
@@ -169,6 +167,87 @@ body {
     top: 285px;
     left: 964px;
 }
+
+
+
+.services-title {
+    position: relative;
+    top: 68px;
+    left: 39px;
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-weight: 900;
+    text-align: left;  
+}
+
+.services-content {
+    position: relative;
+    top: 77px;
+    left: 41px;
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-weight: 300;
+    text-align: left;
+}
+
+
+.services-item-title {
+    margin: 0px;
+    display: inline-block;
+    font-size: 18px;
+line-height: 18px;
+color: #666d89;
+font-weight: 900;
+text-align: left;
+}
+
+.services-item-description {
+    margin: 0px;
+    display: inline-block;
+    width: 219px;
+height: 128px;
+font-size: 12px;
+line-height: 22px;
+color: #767e9e;
+
+font-weight: 400;
+text-align: left;
+}
+
+
+.layout-3-col {
+    
+    position: relative;
+    top: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.icon-pen, 
+.icon-phone,
+.icon-heart,
+.icon-bulb,
+.icon-bubble,
+.icon-star {
+    position: relative;
+    top: -16px;
+    left: -49px;
+}
+
+.layout-2-col
+{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+
+
+
+
 
 
 
