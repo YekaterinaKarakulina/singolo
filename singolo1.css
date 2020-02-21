@@ -116,9 +116,9 @@ body {
 
   .phone__shadow__horizontal {
     position: absolute;
-    transform: rotate(270deg);
-    top: 48px;
-    left: 510px;
+    transform: scaleX(-1) rotate(-90deg);
+    top: 59px;
+    left: 548px;
 }
 
 .phone__base__vertical {
@@ -126,16 +126,45 @@ body {
     position: absolute;
       top: 59px;
       left: 111px;
+      
   }
-  
+
+  .phone__background__vertical {
+    z-index: 3;
+    display: inline-block;
+    position: absolute;
+    top: 124px;
+    left: 125px;
+    width: 189px;
+    height: 334px;
+      background: url(assets/ph-background-vert.png);
+      
+      background-position-x: -13px;
+    background-position-y: -135px;
+      
+      
+  }
+
+  .phone__background__horizontal {
+    z-index: 3;
+    display: inline-block;
+    position: absolute;
+    top: 194px;
+    left: 486px;
+    width: 334px;
+    height: 189px;
+    background:  url(assets/ph-background-hor.png);
+    background-position-x: -126px;
+    background-position-y: -119px;
+  }
 
 
   .phone__base__horizontal {
     position: absolute;
     z-index: 2;
     transform: rotate(90deg);
-    top: 48px;
-    left: 535px;
+    top: 59px;
+    left: 548px;
 }
 
 
