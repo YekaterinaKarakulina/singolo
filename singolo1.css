@@ -1,5 +1,6 @@
 body {
-    font-family: 'Lato', sans-serif;   
+    font-family: 'Lato', sans-serif;  
+    
 }
 
 .wrapper {
@@ -55,27 +56,32 @@ body {
 
 
 .logo {
+    display: inline-block;  
+    text-align: left;
+    letter-spacing: -1px;
+}
+
+.logo-title {
     display: inline-block;
+    color: #ffffff;
     font-size: 25px;
     line-height: 6px;
-    font-weight: 700;
-    text-align: left;
-    padding-top: 41px;
+    padding-top: 25px;
     padding-left: 39px;
-    
+    font-weight: 700;
 }
-
-.logo-part1 {
-    color: #ffffff;
-    
-}
-
-.logo-part2 {
-    color: #f06c64;
+.logo-title::after {
+    content: "*";
     position: relative;
-    top: -1px;
-    left: -7px;
+    top: 0;
+    left: 0;
+    font-size: 23px;
+    color: #f06c64;
+    font-weight: 400;
 }
+
+
+
 
 .navigation {
     display: inline-block;
@@ -83,7 +89,7 @@ body {
     line-height: 6px;    
     font-weight: 700;
     text-align: center;
-    padding-left: 401px;
+    padding-left: 409px;
 }
 
 .navigation-list li{
