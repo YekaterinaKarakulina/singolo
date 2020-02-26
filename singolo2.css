@@ -7,3 +7,139 @@ body {
     width: 1020px;
     margin: 0 auto;
 }
+
+.portfolio-top {
+    /*height: 870px;*/
+    height: 1200px;
+    background-color: #2d303a;
+}
+
+.portfolio-bottom {
+    height: 6px;
+    background-color: #323746;
+}
+
+.about-us-top {
+    /*height: 728px;*/
+    background-color: #f2f2f2;
+}
+
+.about-us-bottom {
+    height: 6px;
+    background-color: #ffffff;
+}
+
+.portfolio-title {
+    font-size: 30px;
+    line-height: 18px;
+    padding-top: 10px;
+    color: #666d89;
+    font-weight: 900;
+    text-align: left;
+}
+
+.portfolio-content {
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-weight: 300;
+    text-align: left;
+}
+
+.portfolio-tags-list {
+    display: flex;
+    width: 500px;
+    justify-content: space-between;
+}
+
+.tag {
+    border-radius: 5px;
+    border: 1px solid #666d89;
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-weight: 400;
+    text-align: left;
+  
+}
+
+.tag:hover {
+    background-color: #0f0f0f;
+}
+
+.layout-4-col {
+    display: grid;
+    grid-template: repeat(3, 200px)/ repeat(4, 200px);
+}
+
+.about-us-title {
+    font-size: 30px;
+    line-height: 18px;
+    color: #666d89;
+    font-weight: 900;
+    text-align: left;
+}
+
+.about-us-content {
+    width: 940px;
+    height: 57px;
+    font-size: 18px;
+    line-height: 30px;
+    color: #767e9e;
+    font-weight: 300;
+    text-align: left;
+}
+
+.layout-3-col-about-us {
+    display: flex;
+    width: 1020px;
+    justify-content: space-between;
+}
+
+.person-name {
+    font-size: 18px;
+    line-height: 18px;
+    color: #666d89;
+    font-weight: 900;
+    text-align: left;
+}
+
+.person-description {
+    width: 300px;
+    /*height: 175px;*/
+    font-size: 12px;
+    line-height: 22px;
+    color: #767e9e;
+    font-weight: 400;
+    text-align: left;
+}
+
+.icon-facebook {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background-image: url('assets/img/social-media-icons/icon-facebook.svg');
+}
+
+.icon-google {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background-image: url('assets/img/social-media-icons/icon-google.svg');
+}
+
+.icon-twitter {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background-image: url('assets/img/social-media-icons/icon-twitter.svg');
+}
+
+.icon-linkedIn {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    background-image: url('assets/img/social-media-icons/icon-linkedIn.svg');
+}
