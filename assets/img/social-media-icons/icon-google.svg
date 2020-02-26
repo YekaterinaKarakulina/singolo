@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 35" width="34" height="35">
+	<defs>
+		<image width="34" height="35" id="img1" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACIAAAAjCAYAAADxG9hnAAADZklEQVRYheWYv2sUWxTHpwoiPAioT3ivSWEhVvsfuKWljX2EuSfjbM6ZEyIBX4rcbuacGzIiQhCRLWxCmt3/IIKonQErUWRBRe1MitjmFbOzO/sj2Zlk98HDAwPLnb33fO453/vjjOf9Hw3sk4sQ6R1A3QGSt4D6GUh/Aemv7Le8BdQdiPQO2CcXpw6A+OgKkD4FlCNDSdtvOA44roeh1vL/hKHWAo7rfsOxoaQNKEdA+hTx0ZVzA1jbvADk1g3KF6DYMqfzZfsyp/NAsTUoXyDSf6xtXjgTROPB40tA8spQ0q4CMA7IUNIGkpewunm5UmdY3bwOJB2/4fisAMPmNxwDyacl3LxRqkOwsvU3kH4NOF6cFkRvbI4XgfTDxMisrckfgPJumpEYNr/hGFBfn6oZE7nEUNKeFUTPDyVtE7lk7MuA0wWDyY/zCLOsMafzBpMfUfTw6shLIH0GFNvJA2jToBz3HtKfBrVZFQYotoZ0e6DR2t05ID2cFA1Dug8knYBdPWBdzGECTheqgjCn84ByYO3uXK9xifTWJG0E7OoG5RhIbA+sG52AXb0qiOdlWlkivVVo0O1JKwVIrEE5hkjS4bYiSBYl3SsDkh0HhfQA6YuA4/rJXfoRMaQ/8xT2I9JPTRWQgOM6kL4ogrwPOF44sUfuhHS/m55ODgGRpCFrzaDuZU9PwHuTgMJQa0D6vg+CclBmBpnAHOcOgaSTzawbrTHPpDEHfJcF6c2EtdZ3Nrh0q6RmFKREarJjXWyWlsFZD66k8iCjqSkh1l7+UZu5WIHldq6J/lhiA9bFMiAjYi2zfLsO98cANstoYZyNLN8yG1pRnEUDkk4xIlVsZEOzdncOUA5O2+Lzpdvd5m1RL8VNrqxlmtPDgS2+62j7tEMv4HQBUFvDB15RqFVs7KHneZ4XRQ+v+qjf/6trgI/6Pbjv/hz7BxO5BFBbswYB1NaJFyPP65YPqK9nfVU0JG8mlhewunkZSD/M6vJsUD6WLivCla1rQPLJkEbTgvCX3QaQdMKVrWuVOmaRkZeA2jpvgQWoLSB51Xjw+NJZx/GA3Loh+eYvu42qJae/7DZ81M9Abv3MAEVbXpO/8iIcUFuGNLp7T28OF+F37+lNQxoBamuqRfiwlfosQfocWG7P5LPEb2X/AgW0WIhYvKX6AAAAAElFTkSuQmCC"/>
+	</defs>
+	<style>
+		tspan { white-space:pre }
+	</style>
+	<use id="Ellipse 2 copy" href="#img1" transform="matrix(1,0,0,1,0,0)"/>
+</svg>
