@@ -9,7 +9,7 @@ body {
 }
 
 .portfolio-top {
-    /*height: 870px;*/
+    height: 870px;
     height: 1200px;
     background-color: #2d303a;
 }
@@ -20,7 +20,7 @@ body {
 }
 
 .about-us-top {
-    /*height: 728px;*/
+    height: 728px;
     background-color: #f2f2f2;
 }
 
@@ -71,8 +71,111 @@ body {
 
 .layout-4-col {
     display: grid;
-    grid-template: repeat(3, 200px)/ repeat(4, 200px);
+    grid-template: repeat(3, 220px)/ repeat(4, 220px);
 }
+
+.picture {
+    width: 200px;
+    height: 200px;
+}
+
+.picture-1 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/1.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-2 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/2.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-3 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/3.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-4 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/4.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-5 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/5.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-6 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/6.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-7 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/7.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-8 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/8.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-9 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/9.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-10 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/10.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-11 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/11.png');
+    position: relative;
+    z-index: 5;
+}
+
+.picture-12 {
+    top: 0px;
+    left: 0px;
+    background-image: url('assets/img/portfolio/12.png');
+    position: relative;
+    z-index: 5;
+}
+
+
 
 .about-us-title {
     font-size: 30px;
@@ -143,3 +246,4 @@ body {
     height: 33px;
     background-image: url('assets/img/social-media-icons/icon-linkedIn.svg');
 }
+
