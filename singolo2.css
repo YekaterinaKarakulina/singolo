@@ -36,13 +36,14 @@ body {
 .about-us-bottom {
     height: 6px;
     background-color: #ffffff;
-    
 }
 
 .portfolio-title {
     font-size: 30px;
     line-height: 18px;
-    padding-top: 10px;
+    padding-top: 72px;
+    padding-left: 41px;
+    letter-spacing: 0.1px;
     color: #666d89;
     font-weight: 900;
     text-align: left;
@@ -50,7 +51,9 @@ body {
 
 .portfolio-content {
     width: 940px;
-    height: 57px;
+    margin: 0;
+    padding: 25px 0px 0px 40px;
+    letter-spacing: -0.22px;
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
@@ -58,135 +61,117 @@ body {
     text-align: left;
 }
 
+.portfolio-tags {
+    padding: 10px 0px 10px 40px;
+}
+
 .portfolio-tags-list {
     display: flex;
-    width: 500px;
+    width: 288px;
     justify-content: space-between;
 }
 
 .tag {
     border-radius: 5px;
     border: 1px solid #666d89;
-    padding-left: 20px;
+    padding-left: 6px;
+    padding-right: 8px;
     font-size: 12px;
-    line-height: 22px;
+    line-height: 20px;
     color: #767e9e;
     font-weight: 400;
     text-align: left;
-  
 }
 
 .tag:hover {
-    background-color: #0f0f0f;
+    color: #dedede;
+    border: 1px solid #dedede;
+    cursor: pointer;
 }
 
 .layout-4-col {
     display: grid;
-    grid-template: repeat(3, 220px)/ repeat(4, 220px);
+    margin-top: 9px;
+    margin-left: 40px;
+    grid-template: repeat(3, 207px)/ repeat(4, 240px);
 }
 
 .picture {
-    width: 200px;
-    height: 200px;
+    width: 220px;
+    height: 187px;
 }
 
 .picture-1 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/1.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -8px;
+    background-position-y: -11px;
 }
 
 .picture-2 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/2.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -82px;
+    background-position-y: -43px;
 }
 
 .picture-3 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/3.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -11px;
+    background-position-y: -1px;
 }
 
 .picture-4 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/4.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -24px;
+    background-position-y: -2px;
 }
 
 .picture-5 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/5.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -10px;
+    background-position-y: -16px;
 }
 
 .picture-6 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/6.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -16px;
+    background-position-y: -4px;
 }
 
 .picture-7 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/7.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -31px;
+    background-position-y: -39px;
 }
 
 .picture-8 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/8.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -24px;
+    background-position-y: -32px;
 }
 
 .picture-9 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/9.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -16px;
+    background-position-y: -2px;
 }
 
 .picture-10 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/10.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -141px;
+    background-position-y: -113px;
 }
 
 .picture-11 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/11.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -144px;
+    background-position-y: -175px;
 }
 
 .picture-12 {
-    top: 0px;
-    left: 0px;
     background-image: url('assets/img/portfolio/12.png');
-    position: relative;
-    z-index: 5;
+    background-position-x: -36px;
+    background-position-y: -60px;
 }
-
-
 
 .about-us-title {
     font-size: 30px;
