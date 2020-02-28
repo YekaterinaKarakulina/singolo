@@ -42,8 +42,6 @@ body {
     font-size: 30px;
     line-height: 18px;
     padding: 72px 0px 0px 41px;
-    /*padding-top: 72px;
-    padding-left: 41px;*/
     letter-spacing: 0.1px;
     color: #666d89;
     font-weight: 900;
@@ -68,16 +66,11 @@ body {
 
 .portfolio-tags-list {
     display: flex;
-    width: 288px;
-    justify-content: space-between;
 }
 
 .tag {
     border-radius: 5px;
     border: 1px solid #666d89;
-    padding: 0px 8px 0px 6px;
-    /*padding-left: 6px;
-    padding-right: 8px;*/
     font-size: 12px;
     line-height: 20px;
     color: #767e9e;
@@ -85,17 +78,35 @@ body {
     text-align: left;
 }
 
+.tag-all {
+    margin-left: 1px;
+    padding: 0px 6px 0px 7px;
+}
+
+.tag-web-design {
+   margin-left: 10px;
+    padding: 0px 6px 0px 6px;
+}
+
+.tag-graphic-design {
+    margin-left: 10px;
+    padding: 0px 5px 0px 6px;
+}
+
+.tag-artwork {
+    margin-left: 10px;
+    padding: 0px 6px 0px 5px;
+}
+
 .tag:hover {
     color: #dedede;
-    border: 1px solid #dedede;
+    border: 1px solid #c5c5c5;
     cursor: pointer;
 }
 
 .layout-4-col {
     display: grid;
     margin: 9px 0px 0px 40px;
-    /*margin-top: 9px;
-    margin-left: 40px;*/
     grid-template: repeat(3, 207px)/ repeat(4, 240px);
 }
 
