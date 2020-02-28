@@ -237,14 +237,17 @@ body {
 }
 
 .person-name {
-    display: inline-block;
+    display: block;
     width: 300px;
     font-size: 18px;
     line-height: 18px;
+    max-height: 18px;
+    overflow: hidden;
+    word-break: break-all;
     color: #666d89;
     font-weight: 900;
     text-align: left;
-    padding-top: 15px;
+    padding-top: 15px;    
 }
 
 .person-description {
