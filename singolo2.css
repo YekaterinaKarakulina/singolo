@@ -108,6 +108,8 @@ body {
     display: grid;
     margin: 9px 0px 0px 40px;
     grid-template: repeat(3, 207px)/ repeat(4, 240px);
+    max-height: 621px;
+    overflow-y: hidden;
 }
 
 .picture {
