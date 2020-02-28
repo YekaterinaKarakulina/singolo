@@ -175,6 +175,7 @@ body {
 
 .about-us-title {
     font-size: 30px;
+    padding: 72px 0px 0px 40px;
     line-height: 18px;
     color: #666d89;
     font-weight: 900;
@@ -186,6 +187,7 @@ body {
     height: 57px;
     font-size: 18px;
     line-height: 30px;
+    padding: 25px 0px 0px 40px;
     color: #767e9e;
     font-weight: 300;
     text-align: left;
@@ -193,8 +195,58 @@ body {
 
 .layout-3-col-about-us {
     display: flex;
-    width: 1020px;
-    justify-content: space-between;
+    margin: 46px 20px 0px 20px;
+}
+
+
+/*
+.person-Adam-Jensen {
+    margin-left: 20px;
+}
+
+.person-Desmond-Miles {
+    margin-left: 19px;
+}
+
+.person-Scolara-Visari {
+    margin-left: 21px;
+}
+
+*/
+
+
+.photo {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+
+.photo-Adam-Jensen {
+    background-image: url('assets/img/photos/Adam-Jensen.png');
+    margin-left: 20px;
+}
+
+.photo-Desmond-Miles {
+    background-image: url('assets/img/photos/Desmond-Miles.png');
+    margin-left: 19px;
+}
+
+.photo-Scolara-Visari {
+    background-image: url('assets/img/photos/Scolara-Visari.png');
+    margin-left: 21px;
+}
+
+.personal-data-Adam-Jensen {
+    margin-left: 20px;
+}
+
+.personal-data-Desmond-Miles {
+    margin-left: 19px;
+}
+
+.personal-data-Scolara-Visari
+{
+    margin-left: 20px;
 }
 
 .person-name {
@@ -203,16 +255,21 @@ body {
     color: #666d89;
     font-weight: 900;
     text-align: left;
+    padding-top: 15px;
 }
 
 .person-description {
     width: 300px;
-    /*height: 175px;*/
     font-size: 12px;
     line-height: 22px;
     color: #767e9e;
     font-weight: 400;
     text-align: left;
+    padding-top: 8px;
+}
+
+.social-media {
+    padding-top: 21px;
 }
 
 .icon-facebook {
@@ -226,6 +283,7 @@ body {
     display: inline-block;
     width: 33px;
     height: 33px;
+    margin-left: 3px;
     background-image: url('assets/img/social-media-icons/icon-google.svg');
 }
 
@@ -233,6 +291,7 @@ body {
     display: inline-block;
     width: 33px;
     height: 33px;
+    margin-left: 3px;
     background-image: url('assets/img/social-media-icons/icon-twitter.svg');
 }
 
@@ -240,6 +299,7 @@ body {
     display: inline-block;
     width: 33px;
     height: 33px;
+    margin-left: 3px;
     background-image: url('assets/img/social-media-icons/icon-linkedIn.svg');
 }
 
