@@ -41,8 +41,9 @@ body {
 .portfolio-title {
     font-size: 30px;
     line-height: 18px;
-    padding-top: 72px;
-    padding-left: 41px;
+    padding: 72px 0px 0px 41px;
+    /*padding-top: 72px;
+    padding-left: 41px;*/
     letter-spacing: 0.1px;
     color: #666d89;
     font-weight: 900;
@@ -74,8 +75,9 @@ body {
 .tag {
     border-radius: 5px;
     border: 1px solid #666d89;
-    padding-left: 6px;
-    padding-right: 8px;
+    padding: 0px 8px 0px 6px;
+    /*padding-left: 6px;
+    padding-right: 8px;*/
     font-size: 12px;
     line-height: 20px;
     color: #767e9e;
@@ -91,8 +93,9 @@ body {
 
 .layout-4-col {
     display: grid;
-    margin-top: 9px;
-    margin-left: 40px;
+    margin: 9px 0px 0px 40px;
+    /*margin-top: 9px;
+    margin-left: 40px;*/
     grid-template: repeat(3, 207px)/ repeat(4, 240px);
 }
 
@@ -103,74 +106,62 @@ body {
 
 .picture-1 {
     background-image: url('assets/img/portfolio/1.png');
-    background-position-x: -8px;
-    background-position-y: -11px;
+    background-position: -8px -11px;
 }
 
 .picture-2 {
     background-image: url('assets/img/portfolio/2.png');
-    background-position-x: -82px;
-    background-position-y: -43px;
+    background-position: -82px -43px;
 }
 
 .picture-3 {
     background-image: url('assets/img/portfolio/3.png');
-    background-position-x: -11px;
-    background-position-y: -1px;
+    background-position: -11px -1px;
 }
 
 .picture-4 {
     background-image: url('assets/img/portfolio/4.png');
-    background-position-x: -24px;
-    background-position-y: -2px;
+    background-position: -24px -2px;
 }
 
 .picture-5 {
     background-image: url('assets/img/portfolio/5.png');
-    background-position-x: -10px;
-    background-position-y: -16px;
+    background-position: -10px -16px;
 }
 
 .picture-6 {
     background-image: url('assets/img/portfolio/6.png');
-    background-position-x: -16px;
-    background-position-y: -4px;
+    background-position: -16px -4px;
 }
 
 .picture-7 {
     background-image: url('assets/img/portfolio/7.png');
-    background-position-x: -31px;
-    background-position-y: -39px;
+    background-position: -31px -39px;
 }
 
 .picture-8 {
     background-image: url('assets/img/portfolio/8.png');
-    background-position-x: -24px;
-    background-position-y: -32px;
+    background-position: -24px -32px;
 }
 
 .picture-9 {
     background-image: url('assets/img/portfolio/9.png');
-    background-position-x: -16px;
-    background-position-y: -2px;
+    background-position: -16px -2px;
 }
 
 .picture-10 {
     background-image: url('assets/img/portfolio/10.png');
-    background-position-x: -141px;
-    background-position-y: -113px;
+    background-position: -141px -113px;
 }
 
 .picture-11 {
     background-image: url('assets/img/portfolio/11.png');
-    background-position-x: -144px;
-    background-position-y: -175px;
+    background-position: -144px -175px;
 }
 
 .picture-12 {
     background-image: url('assets/img/portfolio/12.png');
-    background-position-x: -36px;
-    background-position-y: -60px;
+    background-position: -36px -60px;
 }
 
 .about-us-title {
@@ -197,23 +188,6 @@ body {
     display: flex;
     margin: 46px 20px 0px 20px;
 }
-
-
-/*
-.person-Adam-Jensen {
-    margin-left: 20px;
-}
-
-.person-Desmond-Miles {
-    margin-left: 19px;
-}
-
-.person-Scolara-Visari {
-    margin-left: 21px;
-}
-
-*/
-
 
 .photo {
     display: inline-block;
@@ -270,36 +244,28 @@ body {
 
 .social-media {
     padding-top: 21px;
+    margin-left: -3px;
 }
 
-.icon-facebook {
+.icon {
     display: inline-block;
     width: 33px;
     height: 33px;
+    margin-left: 3px;
+}
+
+.icon-facebook {
     background-image: url('assets/img/social-media-icons/icon-facebook.svg');
 }
 
 .icon-google {
-    display: inline-block;
-    width: 33px;
-    height: 33px;
-    margin-left: 3px;
     background-image: url('assets/img/social-media-icons/icon-google.svg');
 }
 
 .icon-twitter {
-    display: inline-block;
-    width: 33px;
-    height: 33px;
-    margin-left: 3px;
     background-image: url('assets/img/social-media-icons/icon-twitter.svg');
 }
 
 .icon-linkedIn {
-    display: inline-block;
-    width: 33px;
-    height: 33px;
-    margin-left: 3px;
     background-image: url('assets/img/social-media-icons/icon-linkedIn.svg');
 }
-
