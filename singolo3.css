@@ -29,6 +29,8 @@ body, footer {
     color: #f0d8d9;
     font-weight: 900;
     text-align: left;
+    padding: 71px 0px 0px 39px;
+    letter-spacing: -0.2px;
 }
 
 .get-a-quote-content {
@@ -39,6 +41,8 @@ body, footer {
     color: #f0d8d9;
     font-weight: 300;
     text-align: left;
+    padding: 26px 0px 0px 40px;
+    text-align: justify;
 }
 
 .layout-2-col {
