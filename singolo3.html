@@ -14,12 +14,17 @@
                     <div class="get-a-quote-title">Get A Quote</div>
                     <div class="get-a-quote-content">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
                     <div class="layout-2-col">
-                        <div class="inputs">
-                            <input class="name" type="text" name="name" placeholder="Name(Required)">
-                            <input class="email" type="email" name="email" placeholder="Email(Required)">
-                            <input class="subject" type="text" name="subject" placeholder="Subject">
-                            <input class="description" type="text" name="description" placeholder="Describe your project in detail">
-                        </div>
+                        <form action="https://www.w3schools.com/action_page.php" target="_blank" method="POST">
+                            <fieldset class="required-fields">
+                               <input class="name" type="text" name="name" placeholder="Name(Required)" required>
+                                <input class="email" type="email" name="email" placeholder="Email(Required)" required> 
+                            </fieldset>
+                            <fieldset class="optional-fields">
+                                <input class="subject" type="text" name="subject" placeholder="Subject">
+                                <textarea class="description" name="description" id="" cols="30" rows="10" style="resize: none;" placeholder="Describe your project in detail"></textarea>
+                            </fieldset>
+                            <button class="submit-button">Submit</button>
+                        </form>
                         <div class="contact-information">
                             <div class="contact-information-title">Contact Information</div>
                             <div class="contact-information-content">Quisque hendrerit purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis.</div>
