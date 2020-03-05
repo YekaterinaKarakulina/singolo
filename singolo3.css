@@ -98,10 +98,6 @@ textarea::placeholder {
     padding-top: 7px;
 }
 
-
-
-
-
 .contact-information-title {
     font-size: 18px;
     line-height: 18px;
@@ -110,7 +106,6 @@ textarea::placeholder {
     text-align: left;
     margin: 2px 0px 8px 1px;
 }
-
 
 .contact-information-content,
 .contact-information-contacts {
@@ -129,11 +124,7 @@ textarea::placeholder {
 .contact-information-contacts {
     text-align: left;
     line-height: 21px;
-
 }
-
-
-
 
 .location-logo {
     display: inline-block;
@@ -159,22 +150,42 @@ textarea::placeholder {
     background-image: url("assets/img/contact-info-icons/mail.svg"); 
 }
 
-
 .location-content, 
 .phone-content,
 .mail-content {
     display: inline-block;
 }
 
+.submit-button {
+    font-family: 'Lato', sans-serif;  
+    background-color: #d6564f;
+    font-size: 16px;
+    padding: 10px;
+    line-height: 22px;
+    color: #f0d8d9;
+    font-weight: 400;
+    text-align: left;
+    border:2px solid #f0d8d9;
+    border-radius: 5px;
+}
+
+.submit-button:hover {
+    cursor: pointer;
+    color: #f48c8f;
+}
+
 .copyright {
     display: inline-block;
-    font-size: 10px;
-    line-height: 18px;
-    color: #f0d8d9;
+    color: #666d89;
+    font-size: 12px;
+    font-weight: 400;
+    position: absolute;
+    margin: 32px 40px;
 }
 
 .social-media {
     display: inline-block;
+    margin: 21px 0px 0px 824px;
 }
 
 .icon {
@@ -203,8 +214,3 @@ textarea::placeholder {
 .icon-linkedIn {
     background-image: url('assets/img/social-media-icons/icon-linkedIn.svg');
 }
-
-
-
-
-
