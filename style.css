@@ -14,79 +14,6 @@ body {
     border-bottom: 6px solid #323746;  
 }
 
-.wrapper-slider {
-   height: 594px;
-    background-color: #f06c64; 
-    border-bottom: 6px solid #ea676b;
-}
-
-
-.wrapper-services {
-    background-color: #f2f2f2;
-    height: 494px;
-    border-bottom: 5px solid #ffffff;
-}
-
-/*
-.header-top { 
-    position: relative;
-    z-index: 1;
-    height: 89px;
-    background-color: #2d303a;    
-}
-
-.header-bottom{
-    height: 6px;
-    background-color: #323746;
-    position: relative;
-    z-index: 2;
-}
-*/
-
-
-
-
-/*
-.slider-top {
-    position: relative;
-    top: -6px;    
-    bottom: 0px;
-    height: 600px;
-    background-color: #f06c64; 
-}
-
-.slider-bottom {
-    position: relative;
-    top: -6px;
-    bottom: 0px;
-    height: 6px;
-    background-color: #ea676b;
-}
-
-*/
-
-/*
-
-.services-top {
-    position: relative;
-    top: -6px;
-    background-color: #f2f2f2;
-    height: 495px;
-}
-
-.services-bottom {    
-    position: relative;
-    top: -7px;
-    background-color: #ffffff;
-    height: 6px;
-}
-
-
-
-*/
-
-
-
 .logo {
     display: inline-block;  
     text-align: left;
@@ -97,18 +24,16 @@ body {
 .logo-title {
     display: inline-block;
     color: #ffffff;
-    font-size: 25px;
+    font-size: 26px;
     line-height: 6px;
     padding-top: 26px;
-    padding-left: 41px;
+    padding-left: 39px;
     font-weight: 700;
 }
 
 .logo-title::after {
     content: "*";
     position: relative;
-    top: 0;
-    left: 0;
     font-size: 25px;
     color: #f06c64;
     font-weight: 700;
@@ -116,11 +41,8 @@ body {
 
 .navigation {
     display: inline-block;
-    line-height: 6px;    
-    font-weight: 700;
     text-align: center;
-    padding-left: 409px;
-    
+    padding-left: 407px;
 }
 
 .navigation-list li{
@@ -149,6 +71,27 @@ body {
 
 .navigation-list li:last-child::after {
     content: ""; 
+}
+
+
+
+
+
+
+
+
+
+
+.wrapper-slider {
+   height: 594px;
+    background-color: #f06c64; 
+    border-bottom: 6px solid #ea676b;
+}
+
+.wrapper-services {
+    background-color: #f2f2f2;
+    height: 494px;
+    border-bottom: 5px solid #ffffff;
 }
 
 .phone__base__vertical {
