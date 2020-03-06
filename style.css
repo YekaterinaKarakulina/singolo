@@ -601,7 +601,7 @@ form .layout-2-col {
 
 .input-name:invalid,
 .input-email:invalid {
-    border: 1px solid #323746;
+    background-color: #d1615b;
 }
 
 input::placeholder,
