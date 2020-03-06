@@ -63,7 +63,7 @@ body {
 }
 
 .navigation-list li::after {
-    content: "."; 
+    content: "·"; 
     padding-right: 10px;
     padding-left: 10px;
     color: #323746;
@@ -511,6 +511,8 @@ body {
 
 .icon:hover{
     cursor: pointer;
+    border: 1px solid #666d89;
+    border-radius: 5px;
 }
 
 .icon-facebook {
@@ -529,15 +531,6 @@ body {
     background-image: url('./assets/img/social-media-icons/icon-linkedIn.svg');
 }
 
-
-
-
-
-
-
-
-
-
 .get-a-quote-top {
     height: 648px;
     background-color: #f06c64;
@@ -546,11 +539,6 @@ body {
 .get-a-quote-bottom {
     height: 6px;
     background-color: #ea676b;
-}
-
-.wrapper-footer {
-    height: 76px;
-    background-color: #2d303a;
 }
 
 .get-a-quote-title {
@@ -575,8 +563,6 @@ body {
     text-align: justify;
 }
 
-
-
 form .layout-2-col {
     display: flex;
     margin: 45px 40px 0px 30px;
@@ -590,7 +576,6 @@ form .layout-2-col {
     margin-left: 22px;
     
 }
-
 
 .input {
     padding: 0;
@@ -614,6 +599,11 @@ form .layout-2-col {
     padding: 0;
 }
 
+.input-name:invalid,
+.input-email:invalid {
+    border: 1px solid #323746;
+}
+
 input::placeholder,
 textarea::placeholder {
     font-size: 12px;
@@ -630,8 +620,6 @@ textarea::placeholder {
     padding-left: 16px;
     padding-top: 7px;
 }
-
-
 
 .contact-information-title {
     font-size: 18px;
@@ -661,14 +649,12 @@ textarea::placeholder {
     line-height: 21px;
 }
 
-
-
 .location-logo {
     display: inline-block;
     width: 7px;
     height: 11px;
     margin: 0 10px 0 3px;
-    background-image: url("assets/img/contact-info-icons/location.svg"); 
+    background-image: url("./assets/img/contact-info-icons/location.svg"); 
 }
 
 .phone-logo {
@@ -676,7 +662,7 @@ textarea::placeholder {
     width: 11px;
     height: 11px;
     margin: 0 7px 0 1px; 
-    background-image: url("assets/img/contact-info-icons/phone.svg"); 
+    background-image: url("./assets/img/contact-info-icons/phone.svg"); 
 }
 
 .mail-logo {
@@ -684,7 +670,7 @@ textarea::placeholder {
     width: 13px;
     height: 8px;
     margin: 7px 7px 0 0 ;
-    background-image: url("assets/img/contact-info-icons/mail.svg"); 
+    background-image: url("./assets/img/contact-info-icons/mail.svg"); 
 }
 
 .phone-logo:hover, 
@@ -717,6 +703,10 @@ textarea::placeholder {
     color: #f48c8f;
 }
 
+.wrapper-footer {
+    height: 76px;
+    background-color: #2d303a;
+}
 
 .copyright {
     display: inline-block;
@@ -727,39 +717,12 @@ textarea::placeholder {
     margin: 32px 40px;
 }
 
+.copyright-1::after {
+    content: "·"; 
+    color: #323746;
+}
+
 .social-media-footer {
     display: inline-block;
     margin: 21px 0px 0px 824px;
 }
-
-.icon {
-    display: inline-block;
-    width: 33px;
-    height: 33px;
-    margin-left: 3px;
-}
-
-.icon:hover{
-    cursor: pointer;
-    border: 1px solid #666d89;
-    border-radius: 5px;
-}
-
-.icon-facebook {
-    background-image: url('assets/img/social-media-icons/icon-facebook.svg');
-}
-
-.icon-google {
-    background-image: url('assets/img/social-media-icons/icon-google.svg');
-}
-
-.icon-twitter {
-    background-image: url('assets/img/social-media-icons/icon-twitter.svg');
-}
-
-.icon-linkedIn {
-    background-image: url('assets/img/social-media-icons/icon-linkedIn.svg');
-}
-
-
-
