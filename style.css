@@ -244,17 +244,8 @@ body {
     text-align: justify;
 }
 
-
-
-
-
-
 .wrapper-portfolio {
     height: 870px;
-}
-
-.wrapper-about-us {
-    height: 734px;
 }
 
 .portfolio-top {
@@ -267,16 +258,6 @@ body {
     top: -6px;
     height: 6px;
     background-color: #323746;
-}
-
-.about-us-top {
-    height: 728px;
-    background-color: #f2f2f2;
-}
-
-.about-us-bottom {
-    height: 6px;
-    background-color: #ffffff;
 }
 
 .portfolio-title {
@@ -340,6 +321,7 @@ body {
 }
 
 .tag:hover {
+    background-color: #0f0f0f;
     color: #dedede;
     border: 1px solid #c5c5c5;
     cursor: pointer;
@@ -359,63 +341,77 @@ body {
 }
 
 .picture-1 {
-    background-image: url('assets/img/portfolio/1.png');
+    background-image: url('./assets/img/portfolio/1.png');
     background-position: -8px -11px;
 }
 
 .picture-2 {
-    background-image: url('assets/img/portfolio/2.png');
+    background-image: url('./assets/img/portfolio/2.png');
     background-position: -82px -43px;
 }
 
 .picture-3 {
-    background-image: url('assets/img/portfolio/3.png');
+    background-image: url('./assets/img/portfolio/3.png');
     background-position: -11px -1px;
 }
 
 .picture-4 {
-    background-image: url('assets/img/portfolio/4.png');
+    background-image: url('./assets/img/portfolio/4.png');
     background-position: -24px -2px;
 }
 
 .picture-5 {
-    background-image: url('assets/img/portfolio/5.png');
+    background-image: url('./assets/img/portfolio/5.png');
     background-position: -10px -16px;
 }
 
 .picture-6 {
-    background-image: url('assets/img/portfolio/6.png');
+    background-image: url('./assets/img/portfolio/6.png');
     background-position: -16px -4px;
 }
 
 .picture-7 {
-    background-image: url('assets/img/portfolio/7.png');
+    background-image: url('./assets/img/portfolio/7.png');
     background-position: -31px -39px;
 }
 
 .picture-8 {
-    background-image: url('assets/img/portfolio/8.png');
+    background-image: url('./assets/img/portfolio/8.png');
     background-position: -24px -32px;
 }
 
 .picture-9 {
-    background-image: url('assets/img/portfolio/9.png');
+    background-image: url('./assets/img/portfolio/9.png');
     background-position: -16px -2px;
 }
 
 .picture-10 {
-    background-image: url('assets/img/portfolio/10.png');
+    background-image: url('./assets/img/portfolio/10.png');
     background-position: -141px -113px;
 }
 
 .picture-11 {
-    background-image: url('assets/img/portfolio/11.png');
+    background-image: url('./assets/img/portfolio/11.png');
     background-position: -144px -175px;
 }
 
 .picture-12 {
-    background-image: url('assets/img/portfolio/12.png');
+    background-image: url('./assets/img/portfolio/12.png');
     background-position: -36px -60px;
+}
+
+.wrapper-about-us {
+    height: 734px;
+}
+
+.about-us-top {
+    height: 728px;
+    background-color: #f2f2f2;
+}
+
+.about-us-bottom {
+    height: 6px;
+    background-color: #ffffff;
 }
 
 .about-us-title {
@@ -450,17 +446,17 @@ body {
 }
 
 .photo-Adam-Jensen {
-    background-image: url('assets/img/photos/Adam-Jensen.png');
+    background-image: url('./assets/img/about-us/Adam-Jensen.png');
     margin-left: 20px;
 }
 
 .photo-Desmond-Miles {
-    background-image: url('assets/img/photos/Desmond-Miles.png');
+    background-image: url('./assets/img/about-us/Desmond-Miles.png');
     margin-left: 19px;
 }
 
 .photo-Scolara-Visari {
-    background-image: url('assets/img/photos/Scolara-Visari.png');
+    background-image: url('./assets/img/about-us/Scolara-Visari.png');
     margin-left: 21px;
 }
 
@@ -501,7 +497,7 @@ body {
     padding-top: 8px;
 }
 
-.social-media {
+.person-social-media {
     padding-top: 21px;
     margin-left: -3px;
 }
@@ -518,19 +514,19 @@ body {
 }
 
 .icon-facebook {
-    background-image: url('assets/img/social-media-icons/icon-facebook.svg');
+    background-image: url('./assets/img/social-media-icons/icon-facebook.svg');
 }
 
 .icon-google {
-    background-image: url('assets/img/social-media-icons/icon-google.svg');
+    background-image: url('./assets/img/social-media-icons/icon-google.svg');
 }
 
 .icon-twitter {
-    background-image: url('assets/img/social-media-icons/icon-twitter.svg');
+    background-image: url('./assets/img/social-media-icons/icon-twitter.svg');
 }
 
 .icon-linkedIn {
-    background-image: url('assets/img/social-media-icons/icon-linkedIn.svg');
+    background-image: url('./assets/img/social-media-icons/icon-linkedIn.svg');
 }
 
 
