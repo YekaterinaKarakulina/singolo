@@ -135,19 +135,19 @@ body {
 
 .arrow-left {
     background-image: url(./assets/img/slider/arrow.svg);
-    position: relative;
-    top: 281px;
-    left: 42px;
+    position: absolute;
+    top: 376px;
+    left: 291px;
     height: 27px;
     width: 16px;
 }
 
 .arrow-right {
     background-image: url(./assets/img/slider/arrow.svg);
-    position: relative;
+    position: absolute;
     transform: rotate(180deg);
-    top: -720px;
-    left: 964px;
+    top: 376px;
+    left: 1213px;
     height: 27px;
     width: 16px;
 }
