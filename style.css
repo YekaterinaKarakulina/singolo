@@ -81,23 +81,23 @@ body {
 
 .phone__base__vertical {
     z-index: 2;
-    position: relative;
-    top: 1px;
-    left: 112px; 
+    position: absolute;
+    top: 148px;
+    left: 361px;
 }
 
 .phone__shadow__vertical {
-    position: relative;
-    top: 26px;
-    left: -107px;  
+    position: absolute;
+    top: 148px;
+    left: 361px; 
 }
 
 .phone__background__vertical {
     z-index: 3;
     display: inline-block;
-    position: relative;
-    top: -59px;
-    left: -337px;
+    position: absolute;
+    top: 213px;
+    left: 375px;
     width: 188px;
     height: 333px;
     background: url(./assets/img/slider/ph-background-vert.png);
@@ -106,31 +106,31 @@ body {
 }
 
 .phone__base__horizontal {
-    position: relative;
+    position: absolute;
     z-index: 2;
     transform: rotate(90deg);
-    top: 0px;
-    left: -108.5px;
+    top: 148px;
+    left: 795px;
 }
 
 .phone__shadow__horizontal {
-    position: relative;
+    position: absolute;
     transform: scaleX(-1) rotate(-90deg);
-    top: -462.5px;
-    left: 546.5px;
+    top: 148px;
+    left: 795px;
 }
 
 .phone__background__horizontal {
     z-index: 3;
     display: inline-block;
-    position: relative;
-    top: -621px;
-    left: 241px;
-    width: 333.5px;
-    height: 189px;
+    position: absolute;
+    top: 283px;
+    left: 733px;
+    width: 334px;
+    height: 188px;
     background: url(./assets/img/slider/ph-background-hor.png);
-    background-position-x: -125px;
-    background-position-y: -118px;
+    background-position-x: -124px;
+    background-position-y: -119px;
 }
 
 .arrow-left {
@@ -180,13 +180,12 @@ body {
     position: relative;
     top: 79px;
     left: 40px;
-    width: 940px;
+    width: 945px;
     height: 57px;
     font-size: 18px;
     line-height: 30px;
     color: #767e9e;
     font-weight: 300;
-    text-align: left;
 }
 
 .layout-3-col {
@@ -201,7 +200,6 @@ body {
 
 .layout-2-col
 {
-    height: 123px;
     display: grid;
     grid-template-columns: 80px 233px;
     justify-content: left;   
@@ -235,7 +233,7 @@ body {
     margin-top: 9px;
     display: inline-block;
     width: 219px;
-    height: 90px;
+    height: 80px;
     overflow: hidden;
     font-size: 12px;
     line-height: 21px;
@@ -480,7 +478,8 @@ body {
     line-height: 18px;
     max-height: 18px;
     overflow: hidden;
-    word-break: break-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
     color: #666d89;
     font-weight: 900;
     text-align: left;
@@ -493,7 +492,7 @@ body {
     line-height: 22px;
     color: #767e9e;
     font-weight: 400;
-    text-align: left;
+    text-align: justify;
     padding-top: 8px;
 }
 
@@ -565,7 +564,7 @@ body {
 
 form .layout-2-col {
     display: flex;
-    margin: 45px 40px 0px 30px;
+    margin: 43px 40px 0px 30px;
 }
 
 .first-col {
@@ -574,17 +573,16 @@ form .layout-2-col {
 
 .second-col {
     margin-left: 22px;
-    
 }
 
 .input {
     padding: 0;
-    width: 619px;
-    border:0px solid #d6564f;
+    width: 617px;
+    border:1px solid #d6564f;
     border-radius: 5px;
     background-color: #d6564f;
     margin: 0px 0px 16px 0px;
-    height: 38px;
+    height: 36px;
 }
 
 .input-description {
@@ -601,7 +599,7 @@ form .layout-2-col {
 
 .input-name:invalid,
 .input-email:invalid {
-    background-color: #d1615b;
+    border-color: red;
 }
 
 input::placeholder,
@@ -715,11 +713,6 @@ textarea::placeholder {
     font-weight: 400;
     position: absolute;
     margin: 32px 40px;
-}
-
-.copyright-1::after {
-    content: "·"; 
-    color: #323746;
 }
 
 .social-media-footer {
