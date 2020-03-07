@@ -625,7 +625,7 @@ textarea::placeholder {
     color: #f0d8d9;
     font-weight: 900;
     text-align: left;
-    margin: 2px 0px 8px 1px;
+    margin: 4px 0px 7px 1px;
 }
 
 .contact-information-content,
@@ -634,17 +634,11 @@ textarea::placeholder {
     line-height: 22px;
     color: #f0d8d9;
     font-weight: 400;
-    text-align: left;
-    margin-bottom: 22px;
+    margin-bottom: 21px;
 }
 
 .contact-information-content {
     text-align: justify;
-}
-
-.contact-information-contacts {
-    text-align: left;
-    line-height: 21px;
 }
 
 .location-logo {
@@ -671,8 +665,8 @@ textarea::placeholder {
     background-image: url("./assets/img/contact-info-icons/mail.svg"); 
 }
 
-.phone-logo:hover, 
-.mail-logo:hover{
+.phone-content:hover, 
+.mail-content:hover{
     cursor: pointer;
     border: 1px solid #d6564f;
 }
@@ -681,6 +675,11 @@ textarea::placeholder {
 .phone-content,
 .mail-content {
     display: inline-block;
+    font-size: 12px;
+    line-height: 21px;
+    color: #f0d8d9;
+    font-weight: 400;
+    text-align: left
 }
 
 .submit-button {
