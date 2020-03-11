@@ -88,6 +88,10 @@ a {
     border-bottom: 6px solid #ea676b;
 }
 
+.slide2 {
+    display: none;
+}
+
 .phone__base__vertical {
     z-index: 2;
     position: absolute;
@@ -141,6 +145,11 @@ a {
     background-position-x: -124px;
     background-position-y: -119px;
 }
+
+.hidden {
+    z-index: 0;
+}
+
 
 .arrow-left {
     background-image: url(./assets/img/slider/arrow.svg);
