@@ -34,4 +34,32 @@ phone__base__horizontal.addEventListener('click', ()=> {
 });
 
 
+const arrow_left = document.getElementById('arrow-left');
+const arrow_right = document.getElementById('arrow-right');
+var slider_flag = true;
+arrow_left.addEventListener('click', (event) => {
+    if(slider_flag) {
+        event.target.parentElement.classList.add('switch');
+        event.target.parentElement.querySelector('.slide1').classList.add('hidden');
+        slider_flag = false;
+    } else {
+        event.target.parentElement.classList.remove('switch');
+        event.target.parentElement.querySelector('.slide1').classList.remove('hidden');
+        slider_flag = true;
+    }
+});
+
+arrow_right.addEventListener('click', (event) => {
+    if(slider_flag) {
+        event.target.parentElement.classList.add('switch');
+        event.target.parentElement.querySelector('.slide1').classList.add('hidden');
+        slider_flag = false;
+    } else {
+        event.target.parentElement.classList.remove('switch');
+        event.target.parentElement.querySelector('.slide1').classList.remove('hidden');
+        slider_flag = true;
+    }
+});
+
+
 
