@@ -16,21 +16,19 @@ var flag_phone_horizontal = false;
 phone__base__vertical.addEventListener('click', ()=> {
     if(flag_phone_vertical) {
         phone__background__vertical.classList.remove('hidden');
-        flag_phone_vertical = false;
     } else {
         phone__background__vertical.classList.add('hidden');
-        flag_phone_vertical = true;
     }
+    flag_phone_vertical = !flag_phone_vertical;
 });
 
 phone__base__horizontal.addEventListener('click', ()=> {
     if(flag_phone_horizontal) {
         phone__background__horizontal.classList.remove('hidden');
-        flag_phone_horizontal = false;
     } else {
         phone__background__horizontal.classList.add('hidden');
-        flag_phone_horizontal = true;
     }
+    flag_phone_horizontal = !flag_phone_horizontal;
 });
 
 
