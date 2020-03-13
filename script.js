@@ -80,3 +80,34 @@ document.querySelector('.control.right').addEventListener('click', function() {
 		nextItem(currentItem);
 	}
 });
+
+
+
+const SUBMIT_BUTTON = document.getElementById('submit-button');
+const CLOSE_BUTTON = document.getElementById('close-button');
+
+
+SUBMIT_BUTTON.addEventListener('click', e => {
+	const subject = document.getElementById('subject').value.toString();
+	const description = document.getElementById('description').value.toString();
+	if(subject == '') {
+		document.getElementById('subject-result').innerText = "Без темы";
+	} else {
+		document.getElementById('subject-result').innerText = 'Тема: ' + subject;
+	}
+	if(description == '')
+	{
+		document.getElementById('description-result').innerText = "Без описания";
+	} else {
+		document.getElementById('description-result').innerText = 'Описание: ' + description;
+	}
+	
+	document.getElementById('message-block').classList.remove('hidden');
+	e.preventDefault();
+});
+
+CLOSE_BUTTON.addEventListener('click', ()=> {
+	document.getElementById('subject-result').innerText = '';
+	document.getElementById('description-result').innerText = '';
+	document.getElementById('message-block').classList.add('hidden');
+});

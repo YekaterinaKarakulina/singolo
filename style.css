@@ -774,6 +774,32 @@ textarea::placeholder {
     color: #f48c8f;
 }
 
+
+
+
+.message-block {
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #0008;
+}
+
+.message-block.hidden {
+    display: none;
+}
+
+.message {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid red;
+    
+}
+
+
+
 .wrapper-footer {
     height: 76px;
     background-color: #2d303a;
