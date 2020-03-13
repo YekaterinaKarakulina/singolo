@@ -10,54 +10,73 @@ const phone__base__vertical = document.getElementById('phone__base__vertical');
 const phone__background__vertical = document.getElementById('phone__background__vertical');
 const phone__base__horizontal = document.getElementById('phone__base__horizontal');
 const phone__background__horizontal = document.getElementById('phone__background__horizontal');
-var flag_phone_vertical = false;
-var flag_phone_horizontal = false;
+var isVisibleVertPhone = false;
+var isVisibleHorPhone = false;
 
 phone__base__vertical.addEventListener('click', ()=> {
-    if(flag_phone_vertical) {
+    if(isVisibleVertPhone) {
         phone__background__vertical.classList.remove('hidden');
     } else {
         phone__background__vertical.classList.add('hidden');
     }
-    flag_phone_vertical = !flag_phone_vertical;
+    isVisibleVertPhone = !isVisibleVertPhone;
 });
 
 phone__base__horizontal.addEventListener('click', ()=> {
-    if(flag_phone_horizontal) {
+    if(isVisibleHorPhone) {
         phone__background__horizontal.classList.remove('hidden');
     } else {
         phone__background__horizontal.classList.add('hidden');
     }
-    flag_phone_horizontal = !flag_phone_horizontal;
+    isVisibleHorPhone = !isVisibleHorPhone;
 });
 
 
-const arrow_left = document.getElementById('arrow-left');
-const arrow_right = document.getElementById('arrow-right');
-var slider_flag = true;
-arrow_left.addEventListener('click', (event) => {
-    if(slider_flag) {
-        event.target.parentElement.classList.add('switch');
-        event.target.parentElement.querySelector('.slide1').classList.add('hidden');
-        slider_flag = false;
-    } else {
-        event.target.parentElement.classList.remove('switch');
-        event.target.parentElement.querySelector('.slide1').classList.remove('hidden');
-        slider_flag = true;
-    }
+let items = document.querySelectorAll('.carousel .slide');
+let currentItem = 0;
+let isEnabled = true;
+
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('active', direction);
+	});
+}
+
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('active');
+		isEnabled = true;
+	});
+}
+
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
+}
+
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
+}
+
+document.querySelector('.control.left').addEventListener('click', function() {
+	if (isEnabled) {
+		previousItem(currentItem);
+	}
 });
 
-arrow_right.addEventListener('click', (event) => {
-    if(slider_flag) {
-        event.target.parentElement.classList.add('switch');
-        event.target.parentElement.querySelector('.slide1').classList.add('hidden');
-        slider_flag = false;
-    } else {
-        event.target.parentElement.classList.remove('switch');
-        event.target.parentElement.querySelector('.slide1').classList.remove('hidden');
-        slider_flag = true;
-    }
+document.querySelector('.control.right').addEventListener('click', function() {
+	if (isEnabled) {
+		nextItem(currentItem);
+	}
 });
-
-
-
