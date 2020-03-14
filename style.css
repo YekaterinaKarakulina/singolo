@@ -185,7 +185,7 @@ a {
     bottom: 0;
 }
 
-.active,
+.current,
 .next {
   display: block;
 }
