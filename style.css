@@ -392,8 +392,15 @@ a {
     padding: 0px 6px 0px 5px;
 }
 
-.tag:hover {
+
+.tag.active { 
     background-color: #0f0f0f;
+    color: #dedede;
+    border: 1px solid #c5c5c5;
+}
+
+
+.tag:not(.active):hover {
     color: #dedede;
     border: 1px solid #c5c5c5;
     cursor: pointer;

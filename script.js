@@ -12,17 +12,35 @@ window.onload = function() {
 	addSliderControlLeftHandler();
 	addSliderControlRightHandler();
 
+	//Portfolio tags
+	addPortfolioTagsHandler();
+
 }
 
 
 
-const NAVIGATION = document.getElementById('navigation-list');
+const NAVIGATION_MENU = document.getElementById('navigation-list');
 
 const addNavigationMenuClickHandler = ()=> {
-	NAVIGATION.addEventListener('click', (event) => {
-		NAVIGATION.querySelectorAll('li').forEach(element => element.classList.remove('active'));
-		event.target.parentElement.classList.add('active');
+	NAVIGATION_MENU.addEventListener('click', (event) => {
+		console.log(event.target);
+		if(event.target.parentElement.classList.contains('nav-item'))
+		{
+			let itemsList = NAVIGATION_MENU.querySelectorAll('li');
+			let className = 'active';
+			let clickedItem = event.target;
+			removeClassNameFromListItems(itemsList, className);
+			addClassNameToClickedItemParent(clickedItem, className);
+		}
 	});
+}
+
+const removeClassNameFromListItems = (itemsList, className)=> {
+	itemsList.forEach(element => element.classList.remove(className));
+}
+
+const addClassNameToClickedItemParent = (clickedItem, className)=> {
+	clickedItem.parentElement.classList.add(className);
 }
 
 
@@ -56,7 +74,6 @@ let items = document.querySelectorAll('.carousel .slide');
 let currentItem = 0;
 let isEnabled = true;
 
-
 const addSliderControlLeftHandler = ()=> {
 	document.querySelector('.control.left').addEventListener('click', function() {
 		if (isEnabled) {
@@ -72,8 +89,6 @@ const addSliderControlRightHandler = ()=> {
 		}
 	});
 }
-
-
 
 function changeCurrentItem(n) {
 	currentItem = (n + items.length) % items.length;
@@ -107,6 +122,31 @@ function previousItem(n) {
 	changeCurrentItem(n - 1);
 	showItem('from-left');
 }
+
+
+
+const PORTFOLIO_TAGS = document.querySelector('.portfolio-tags-list');
+
+const addPortfolioTagsHandler = ()=> {
+
+
+	PORTFOLIO_TAGS.addEventListener('click', (event) => {
+		if(event.target.classList.contains('tag'))
+		{
+			let itemsList = PORTFOLIO_TAGS.querySelectorAll('.tag');
+			let className = 'active';
+			let clickedItem = event.target;
+			removeClassNameFromListItems(itemsList, className);
+			addClassNameToClickedItem(clickedItem, className);
+		}
+	});
+
+}
+
+const addClassNameToClickedItem = (clickedItem, className)=> {
+	clickedItem.classList.add(className);
+}
+
 
 
 
