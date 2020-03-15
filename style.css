@@ -769,7 +769,8 @@ textarea::placeholder {
     text-align: left
 }
 
-.submit-button {
+.submit-button,
+.close-button {
     font-family: 'Lato', sans-serif;  
     background-color: #d6564f;
     font-size: 16px;
@@ -787,12 +788,10 @@ textarea::placeholder {
     color: #f48c8f;
 }
 
-
-
-
 .message-block {
-    position: relative;
+    position: fixed;
     width: 100%;
+    height: 100vh;
     top: 0;
     left: 0;
     background: #0008;
@@ -804,14 +803,30 @@ textarea::placeholder {
 
 .message {
     position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    border: 2px solid red;
-    
+    padding:  20px;
+    width: 500px;
+    height: 250px;
+    top: calc(50% - 125px);
+    left: calc(50% - 250px);
+    font-family: 'Lato', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    background-color: #f0d8d9;
+    border: 5px solid #f48c8f;
+    text-align: left;
+    overflow-y: scroll;
+    word-wrap: break-word; 
 }
 
+.modal_window_title {
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+}
 
+.close-button {
+    margin-left: calc(50% - 50px);
+}
 
 .wrapper-footer {
     height: 76px;

@@ -1,6 +1,4 @@
 window.onload = function() {
-	console.log('hello');
-
 	//Header navigation
 	addNavigationMenuClickHandler();
 
@@ -18,6 +16,11 @@ window.onload = function() {
 	//Portfolio images handler
 	addPortfolioImageHandler();
 
+	//Form submit 
+	addSubmitButtonHandler();
+
+	//Modal window close button
+	addCloseButtonHandler();
 }
 
 
@@ -178,10 +181,7 @@ const mixPortfolioImages = ()=> {
 
 
 const addPortfolioImageHandler = ()=> {
-
-
 	document.getElementById('portfolio-images').addEventListener('click', (event) => {
-
 		if(event.target.classList.contains('picture'))
 		{
 			let imagesList = document.querySelectorAll('.picture');
@@ -189,45 +189,52 @@ const addPortfolioImageHandler = ()=> {
 			let clickedItem = event.target;
 			removeClassNameFromListItems(imagesList, className);
 			addClassNameToClickedItem(clickedItem, className);
-
-		}
+		} 
 	});
-
-	
-
-
 }
 
 
 
-/*
+
 const SUBMIT_BUTTON = document.getElementById('submit-button');
 const CLOSE_BUTTON = document.getElementById('close-button');
+const SUBJECT = document.getElementById('subject');
+const SUBJECT_RESULT = document.getElementById('subject-result');
+const DESCRIPTION_RESULT = document.getElementById('description-result');
+const DESCRIPTION = document.getElementById('description');
+const MESSAGE_BLOCK = document.getElementById('message-block');
 
 
-SUBMIT_BUTTON.addEventListener('click', e => {
-	const subject = document.getElementById('subject').value.toString();
-	const description = document.getElementById('description').value.toString();
-	if(subject == '') {
-		document.getElementById('subject-result').innerText = "Без темы";
+const addSubmitButtonHandler = () => {
+	SUBMIT_BUTTON.addEventListener('click', event => {
+		createMessageSubject();
+		createMessageDescription();
+		MESSAGE_BLOCK.classList.remove('hidden');
+		event.preventDefault();
+	});
+}
+
+const createMessageSubject = ()=> {
+	if(SUBJECT.value.toString() == '') {
+		SUBJECT_RESULT.innerText = "Без темы";
 	} else {
-		document.getElementById('subject-result').innerText = 'Тема: ' + subject;
+		SUBJECT_RESULT.innerText = 'Тема: ' + SUBJECT.value.toString();
 	}
-	if(description == '')
-	{
-		document.getElementById('description-result').innerText = "Без описания";
+}
+
+const createMessageDescription = ()=> {
+	if(DESCRIPTION.value.toString() == '') {
+		DESCRIPTION_RESULT.innerText = "Без описания";
 	} else {
-		document.getElementById('description-result').innerText = 'Описание: ' + description;
+		DESCRIPTION_RESULT.innerText = 'Описание: ' + DESCRIPTION.value.toString();
 	}
-	
-	document.getElementById('message-block').classList.remove('hidden');
-	e.preventDefault();
-});
+}
 
-CLOSE_BUTTON.addEventListener('click', ()=> {
-	document.getElementById('subject-result').innerText = '';
-	document.getElementById('description-result').innerText = '';
-	document.getElementById('message-block').classList.add('hidden');
-});
-
-*/
+const addCloseButtonHandler = () => {
+	CLOSE_BUTTON.addEventListener('click', event => {
+		SUBJECT_RESULT.innerText = '';
+		DESCRIPTION_RESULT.innerText = '';
+		MESSAGE_BLOCK.classList.add('hidden');
+		event.preventDefault();
+	});
+}
