@@ -177,24 +177,21 @@ const mixPortfolioImages = ()=> {
 	document.getElementById('portfolio-images').innerHTML = newInnerHtml;
 }
 
-
-
+let previousClickedImage = '';
+let clickedImage = '';
+let borderBlock = '<span class="image_border"></span>'
 
 const addPortfolioImageHandler = ()=> {
 	document.getElementById('portfolio-images').addEventListener('click', (event) => {
 		if(event.target.classList.contains('picture'))
 		{
-			let imagesList = document.querySelectorAll('.picture');
-			let className = 'clickedImage';
-			let clickedItem = event.target;
-			removeClassNameFromListItems(imagesList, className);
-			addClassNameToClickedItem(clickedItem, className);
+			previousClickedImage = clickedImage;
+			previousClickedImage.innerHTML = '';
+			clickedImage = event.target;
+			clickedImage.innerHTML = borderBlock;
 		} 
 	});
 }
-
-
-
 
 const SUBMIT_BUTTON = document.getElementById('submit-button');
 const CLOSE_BUTTON = document.getElementById('close-button');
