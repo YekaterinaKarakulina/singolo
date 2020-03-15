@@ -15,6 +15,9 @@ window.onload = function() {
 	//Portfolio tags
 	addPortfolioTagsHandler();
 
+	//Portfolio images handler
+	addPortfolioImageHandler();
+
 }
 
 
@@ -174,6 +177,26 @@ const mixPortfolioImages = ()=> {
 
 
 
+const addPortfolioImageHandler = ()=> {
+
+
+	document.getElementById('portfolio-images').addEventListener('click', (event) => {
+
+		if(event.target.classList.contains('picture'))
+		{
+			let imagesList = document.querySelectorAll('.picture');
+			let className = 'clickedImage';
+			let clickedItem = event.target;
+			removeClassNameFromListItems(imagesList, className);
+			addClassNameToClickedItem(clickedItem, className);
+
+		}
+	});
+
+	
+
+
+}
 
 
 

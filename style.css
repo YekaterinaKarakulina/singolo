@@ -419,6 +419,12 @@ a {
     height: 187px;
 }
 
+.picture.clickedImage {
+    border: 5px solid  #F06C64;
+    width: 210px;
+    height: 177px;
+}
+
 .picture-1 {
     background-image: url('./assets/img/portfolio/1.png');
     background-position: -8px -11px;
