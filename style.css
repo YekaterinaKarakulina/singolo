@@ -1,6 +1,5 @@
 body {
     font-family: 'Lato', sans-serif;  
-    
 }
 
 .wrapper {
@@ -84,10 +83,17 @@ a {
 
 .slide {
     position: relative;
+    display: none;
+    animation: 0.5s ease-in-out;
+}
+
+.slide2 {
+    height: 594px;
+    border-bottom: 6px solid #648BF0;
 }
 
 .wrapper-slider {
-    position: relative;
+    position: relative;  
     overflow: hidden; 
 }
 
@@ -155,11 +161,6 @@ a {
     display: none;
 }
 
-.slide {
-    display: none;
-    animation: 0.5s ease-in-out;
-}
-
 .arrow {
     position: absolute;
     height: 27px;
@@ -196,42 +197,41 @@ a {
   width: 1020px;
 }
 
-
 .to-left {
     animation-name: left;
-  }
+}
   
-  .from-right {
+.from-right {
     animation-name: right;
-  }
+}
   
-  .to-right {
+.to-right {
     animation-name: right;
     animation-direction: reverse;
-  }
+}
   
-  .from-left {
+.from-left {
     animation-name: left;
     animation-direction: reverse;
-  }
+}
 
-  @keyframes left {
+@keyframes left {
     from {
       left: 0;
     }
     to {
       left: -100%;
     }
-  }
+}
   
-  @keyframes right {
+@keyframes right {
     from {
       left: 100%;
     }
     to {
       left: 0;
     }
-  }
+}
 
 .wrapper-services {
     background-color: #f2f2f2;
@@ -392,13 +392,11 @@ a {
     padding: 0px 6px 0px 5px;
 }
 
-
 .tag.active { 
     background-color: #0f0f0f;
     color: #dedede;
     border: 1px solid #c5c5c5;
 }
-
 
 .tag:not(.active):hover {
     color: #dedede;
@@ -417,6 +415,7 @@ a {
 .picture {
     width: 220px;
     height: 187px;
+    cursor: pointer;
 }
 
 .image_border {
@@ -427,7 +426,6 @@ a {
     height: 177px;
     background: transparent;
 }
-
 
 .picture-1 {
     background-image: url('./assets/img/portfolio/1.png');

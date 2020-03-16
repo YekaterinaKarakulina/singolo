@@ -23,15 +23,38 @@ window.onload = function() {
 	addCloseButtonHandler();
 }
 
-
-
 const NAVIGATION_MENU = document.getElementById('navigation-list');
+const PORTFOLIO_TAGS = document.querySelector('.portfolio-tags-list');
+const SUBMIT_BUTTON = document.getElementById('submit-button');
+const CLOSE_BUTTON = document.getElementById('close-button');
+const SUBJECT = document.getElementById('subject');
+const SUBJECT_RESULT = document.getElementById('subject-result');
+const DESCRIPTION_RESULT = document.getElementById('description-result');
+const DESCRIPTION = document.getElementById('description');
+const MESSAGE_BLOCK = document.getElementById('message-block');
+const INPUT_NAME = document.querySelector('.input-name');
+const INPUT_EMAIL = document.querySelector('.input-email');
+
+const PORTFOLIO_IMAGES = ['<span class="picture picture-1"></span>', '<span class="picture picture-2"></span>',
+							'<span class="picture picture-3"></span>', '<span class="picture picture-4"></span>',
+							'<span class="picture picture-5"></span>', '<span class="picture picture-6"></span>',
+							'<span class="picture picture-7"></span>', '<span class="picture picture-8"></span>',
+							'<span class="picture picture-9"></span>', '<span class="picture picture-10"></span>',
+							'<span class="picture picture-11"></span>', '<span class="picture picture-12"></span>'];
+
+let previousClickedImage = '';
+let clickedImage = '';
+let borderBlock = '<span class="image_border"></span>';
+let items = document.querySelectorAll('.carousel .slide');
+let currentItem = 0;
+let isEnabled = true;
+let isVisibleVertPhone = false;
+let isVisibleHorPhone = false;
 
 const addNavigationMenuClickHandler = ()=> {
 	NAVIGATION_MENU.addEventListener('click', (event) => {
 		console.log(event.target);
-		if(event.target.parentElement.classList.contains('nav-item'))
-		{
+		if(event.target.parentElement.classList.contains('nav-item')) {
 			let itemsList = NAVIGATION_MENU.querySelectorAll('li');
 			let className = 'active';
 			let clickedItem = event.target;
@@ -48,10 +71,6 @@ const removeClassNameFromListItems = (itemsList, className)=> {
 const addClassNameToClickedItemParent = (clickedItem, className)=> {
 	clickedItem.parentElement.classList.add(className);
 }
-
-
-var isVisibleVertPhone = false;
-var isVisibleHorPhone = false;
 
 const addVerticalPhoneHandler = ()=> {
 	document.getElementById('phone__base__vertical').addEventListener('click', ()=> {
@@ -75,11 +94,6 @@ const addHorizontalPhoneHandler = ()=> {
 	});
 }
 
-
-let items = document.querySelectorAll('.carousel .slide');
-let currentItem = 0;
-let isEnabled = true;
-
 const addSliderControlLeftHandler = ()=> {
 	document.querySelector('.control.left').addEventListener('click', function() {
 		if (isEnabled) {
@@ -90,7 +104,7 @@ const addSliderControlLeftHandler = ()=> {
 
 const addSliderControlRightHandler = ()=> {
 	document.querySelector('.control.right').addEventListener('click', function() {
-		if (isEnabled) {
+		if (isEnabled) { 
 			nextItem(currentItem);
 		}
 	});
@@ -129,14 +143,9 @@ function previousItem(n) {
 	showItem('from-left');
 }
 
-
-
-const PORTFOLIO_TAGS = document.querySelector('.portfolio-tags-list');
-
 const addPortfolioTagsHandler = ()=> {
 	PORTFOLIO_TAGS.addEventListener('click', (event) => {
-		if(event.target.classList.contains('tag'))
-		{
+		if(event.target.classList.contains('tag')) {
 			let itemsList = PORTFOLIO_TAGS.querySelectorAll('.tag');
 			let className = 'active';
 			let clickedItem = event.target;
@@ -151,40 +160,22 @@ const addClassNameToClickedItem = (clickedItem, className)=> {
 	clickedItem.classList.add(className);
 }
 
-
-const PORTFOLIO_IMAGES = ['<span class="picture picture-1"></span>', '<span class="picture picture-2"></span>',
-							'<span class="picture picture-3"></span>', '<span class="picture picture-4"></span>',
-							'<span class="picture picture-5"></span>', '<span class="picture picture-6"></span>',
-							'<span class="picture picture-7"></span>', '<span class="picture picture-8"></span>',
-							'<span class="picture picture-9"></span>', '<span class="picture picture-10"></span>',
-							'<span class="picture picture-11"></span>', '<span class="picture picture-12"></span>'];
-
 const mixPortfolioImages = ()=> {
 	var PORTFOLIO_IMAGES_COPY = [];
 	let newInnerHtml = '';
-	for(var i=0; i<PORTFOLIO_IMAGES.length; i++)
-	{
-		PORTFOLIO_IMAGES_COPY.push(PORTFOLIO_IMAGES[i]);
-
-	}
-	for(var i=0; i< PORTFOLIO_IMAGES.length; i++)
-	{
+	for(var i=0; i<PORTFOLIO_IMAGES.length; i++) {
+		PORTFOLIO_IMAGES_COPY.push(PORTFOLIO_IMAGES[i]); }
+	for(var i=0; i< PORTFOLIO_IMAGES.length; i++) {
 		var randomNumber = Math.floor(Math.random() * PORTFOLIO_IMAGES_COPY.length);
 		var randomImage = PORTFOLIO_IMAGES_COPY[randomNumber];
 		PORTFOLIO_IMAGES_COPY.splice(randomNumber,1);
-		newInnerHtml = newInnerHtml + randomImage;
-	}
+		newInnerHtml = newInnerHtml + randomImage; }
 	document.getElementById('portfolio-images').innerHTML = newInnerHtml;
 }
 
-let previousClickedImage = '';
-let clickedImage = '';
-let borderBlock = '<span class="image_border"></span>'
-
 const addPortfolioImageHandler = ()=> {
 	document.getElementById('portfolio-images').addEventListener('click', (event) => {
-		if(event.target.classList.contains('picture'))
-		{
+		if(event.target.classList.contains('picture')) {
 			previousClickedImage = clickedImage;
 			previousClickedImage.innerHTML = '';
 			clickedImage = event.target;
@@ -193,21 +184,23 @@ const addPortfolioImageHandler = ()=> {
 	});
 }
 
-const SUBMIT_BUTTON = document.getElementById('submit-button');
-const CLOSE_BUTTON = document.getElementById('close-button');
-const SUBJECT = document.getElementById('subject');
-const SUBJECT_RESULT = document.getElementById('subject-result');
-const DESCRIPTION_RESULT = document.getElementById('description-result');
-const DESCRIPTION = document.getElementById('description');
-const MESSAGE_BLOCK = document.getElementById('message-block');
-
-
 const addSubmitButtonHandler = () => {
 	SUBMIT_BUTTON.addEventListener('click', event => {
-		createMessageSubject();
-		createMessageDescription();
-		MESSAGE_BLOCK.classList.remove('hidden');
-		event.preventDefault();
+		var regex = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+        if(INPUT_NAME.value == ''){
+			alert('Введите корректное имя');
+			event.preventDefault();
+			return false;
+		} else if(regex.test(INPUT_EMAIL.value)==false) {
+			alert('Введите корректный e-mail');
+			event.preventDefault();
+			return false;
+		} else {
+			createMessageSubject();
+			createMessageDescription();
+			MESSAGE_BLOCK.classList.remove('hidden');
+			event.preventDefault();
+		}
 	});
 }
 
