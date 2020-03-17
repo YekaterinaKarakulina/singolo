@@ -1,0 +1,10 @@
+.layout-3-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 45px 24px 26px 35px;
+}
+
+.layout-2-col
+{
+   display: flex;
+}

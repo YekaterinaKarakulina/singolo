@@ -13,3 +13,8 @@
     position: relative;  
     overflow: hidden; 
 }
+
+.services__wrapper {
+    background-color: $color-light-darken;
+    border-bottom: 5px solid $color-light;
+}
