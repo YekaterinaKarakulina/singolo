@@ -1,0 +1,11 @@
+.wrapper {
+    display: block;
+    width: 1020px;
+    margin: 0 auto;
+}
+
+.header__wrapper {
+    //height: 89px;
+    background-color: $color-primary;  
+    border-bottom: 6px solid $color-primary-light;  
+}

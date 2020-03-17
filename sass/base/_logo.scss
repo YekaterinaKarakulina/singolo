@@ -1,0 +1,18 @@
+.logo {
+    display: inline-block;  
+    letter-spacing: -1.2px;
+    text-transform: uppercase;
+    text-align: left;
+    padding: 14px 39px 11px;;
+}
+
+.logo-title {
+    display: inline-block;
+    @include font(2.5rem, 3.0rem, 700);
+    color: $color-light;
+    &:after {
+        content: "*";
+        position: relative;
+        color: $color-additional;
+    } 
+}

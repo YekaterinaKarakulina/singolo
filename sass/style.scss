@@ -1,3 +1,18 @@
+//abstract
+@import "./abstract/constants";
+@import "./abstract/mixins";
+
+//base
+@import "./base/base";
+@import "./base/logo";
+
+//components
+@import "./components/navigation";
+
+//layouts
+@import "./layouts/wrapper";
+
+/*
 body {
     font-family: 'Lato', sans-serif;  
 }
@@ -8,7 +23,7 @@ body {
     margin: 0 auto;
 }
 
-.wrapper-header {
+.header__wrapper {
     height: 89px;
     background-color: #2d303a;  
     border-bottom: 6px solid #323746;  
@@ -124,7 +139,7 @@ a {
     left: 126px;
     width: 188px;
     height: 333px;
-    background: url(./assets/img/slider/ph-background-vert.png);
+    background: url('../assets/img/slider/ph-background-vert.png');
     background-position-x: -14px;
     background-position-y: -135px;
 }
@@ -152,7 +167,7 @@ a {
     left: 484px;
     width: 334px;
     height: 188px;
-    background: url(./assets/img/slider/ph-background-hor.png);
+    background: url('../assets/img/slider/ph-background-hor.png');
     background-position-x: -124px;
     background-position-y: -119px;
 }
@@ -170,12 +185,12 @@ a {
 }
 
 .arrow.left {
-    background-image: url(./assets/img/slider/arrow.svg);
+    background-image: url('../assets/img/slider/arrow.svg');
     left: 42px;
 }
 
 .arrow.right {
-    background-image: url(./assets/img/slider/arrow.svg);
+    background-image: url('../assets/img/slider/arrow.svg');
     transform: rotate(180deg);
     left: 964px;
 }
@@ -428,62 +443,62 @@ a {
 }
 
 .picture-1 {
-    background-image: url('./assets/img/portfolio/1.png');
+    background-image: url('../assets/img/portfolio/1.png');
     background-position: -8px -11px;
 }
 
 .picture-2 {
-    background-image: url('./assets/img/portfolio/2.png');
+    background-image: url('../assets/img/portfolio/2.png');
     background-position: -82px -43px;
 }
 
 .picture-3 {
-    background-image: url('./assets/img/portfolio/3.png');
+    background-image: url('../assets/img/portfolio/3.png');
     background-position: -11px -1px;
 }
 
 .picture-4 {
-    background-image: url('./assets/img/portfolio/4.png');
+    background-image: url('../assets/img/portfolio/4.png');
     background-position: -24px -2px;
 }
 
 .picture-5 {
-    background-image: url('./assets/img/portfolio/5.png');
+    background-image: url('../assets/img/portfolio/5.png');
     background-position: -10px -16px;
 }
 
 .picture-6 {
-    background-image: url('./assets/img/portfolio/6.png');
+    background-image: url('../assets/img/portfolio/6.png');
     background-position: -16px -4px;
 }
 
 .picture-7 {
-    background-image: url('./assets/img/portfolio/7.png');
+    background-image: url('../assets/img/portfolio/7.png');
     background-position: -31px -39px;
 }
 
 .picture-8 {
-    background-image: url('./assets/img/portfolio/8.png');
+    background-image: url('../assets/img/portfolio/8.png');
     background-position: -24px -32px;
 }
 
 .picture-9 {
-    background-image: url('./assets/img/portfolio/9.png');
+    background-image: url('../assets/img/portfolio/9.png');
     background-position: -16px -2px;
 }
 
 .picture-10 {
-    background-image: url('./assets/img/portfolio/10.png');
+    background-image: url('../assets/img/portfolio/10.png');
     background-position: -141px -113px;
 }
 
 .picture-11 {
-    background-image: url('./assets/img/portfolio/11.png');
+    background-image: url('../assets/img/portfolio/11.png');
     background-position: -144px -175px;
 }
 
 .picture-12 {
-    background-image: url('./assets/img/portfolio/12.png');
+    background-image: url('../assets/img/portfolio/12.png');
     background-position: -36px -60px;
 }
 
@@ -533,17 +548,17 @@ a {
 }
 
 .photo-Adam-Jensen {
-    background-image: url('./assets/img/about-us/Adam-Jensen.png');
+    background-image: url('../assets/img/about-us/Adam-Jensen.png');
     margin-left: 20px;
 }
 
 .photo-Desmond-Miles {
-    background-image: url('./assets/img/about-us/Desmond-Miles.png');
+    background-image: url('../assets/img/about-us/Desmond-Miles.png');
     margin-left: 19px;
 }
 
 .photo-Scolara-Visari {
-    background-image: url('./assets/img/about-us/Scolara-Visari.png');
+    background-image: url('../assets/img/about-us/Scolara-Visari.png');
     margin-left: 21px;
 }
 
@@ -604,19 +619,19 @@ a {
 }
 
 .icon-facebook {
-    background-image: url('./assets/img/social-media-icons/icon-facebook.svg');
+    background-image: url('../assets/img/social-media-icons/icon-facebook.svg');
 }
 
 .icon-google {
-    background-image: url('./assets/img/social-media-icons/icon-google.svg');
+    background-image: url('../assets/img/social-media-icons/icon-google.svg');
 }
 
 .icon-twitter {
-    background-image: url('./assets/img/social-media-icons/icon-twitter.svg');
+    background-image: url('../assets/img/social-media-icons/icon-twitter.svg');
 }
 
 .icon-linkedIn {
-    background-image: url('./assets/img/social-media-icons/icon-linkedIn.svg');
+    background-image: url('../assets/img/social-media-icons/icon-linkedIn.svg');
 }
 
 .get-a-quote-top {
@@ -735,7 +750,7 @@ textarea::placeholder {
     width: 7px;
     height: 11px;
     margin: 0 10px 0 3px;
-    background-image: url("./assets/img/contact-info-icons/location.svg"); 
+    background-image: url("../assets/img/contact-info-icons/location.svg"); 
 }
 
 .phone-logo {
@@ -743,7 +758,7 @@ textarea::placeholder {
     width: 11px;
     height: 11px;
     margin: 0 7px 0 1px; 
-    background-image: url("./assets/img/contact-info-icons/phone.svg"); 
+    background-image: url("../assets/img/contact-info-icons/phone.svg"); 
 }
 
 .mail-logo {
@@ -751,7 +766,7 @@ textarea::placeholder {
     width: 13px;
     height: 8px;
     margin: 7px 7px 0 0 ;
-    background-image: url("./assets/img/contact-info-icons/mail.svg"); 
+    background-image: url("../assets/img/contact-info-icons/mail.svg"); 
 }
 
 .phone-content:hover, 
@@ -848,3 +863,5 @@ textarea::placeholder {
     display: inline-block;
     margin: 21px 0px 0px 824px;
 }
+
+*/
