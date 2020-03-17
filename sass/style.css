@@ -29,6 +29,29 @@ body {
   color: #f06c64;
 }
 
+.control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.arrow {
+  position: absolute;
+  height: 27px;
+  width: 16px;
+  top: 281px;
+  cursor: pointer;
+}
+.arrow.left {
+  background-image: url("../assets/img/slider/arrow.svg");
+  left: 42px;
+}
+.arrow.right {
+  background-image: url("../assets/img/slider/arrow.svg");
+  transform: rotate(180deg);
+  left: 964px;
+}
+
 .header__navigation {
   display: inline-block;
   text-align: center;
@@ -60,6 +83,126 @@ body {
   color: #f06c64;
 }
 
+.slide {
+  position: relative;
+  display: none;
+  animation: 0.5s ease-in-out;
+}
+
+.slide2 {
+  height: 594px;
+  border-bottom: 6px solid #648BF0;
+}
+
+.background {
+  height: 594px;
+  background-color: #f06c64;
+  border-bottom: 6px solid #ea676b;
+}
+
+.hidden {
+  display: none;
+}
+
+.current,
+.next {
+  display: block;
+}
+
+.next {
+  position: absolute;
+  top: 0;
+  width: 1020px;
+}
+
+.to-left {
+  animation-name: left;
+}
+
+.from-right {
+  animation-name: right;
+}
+
+.to-right {
+  animation-name: right;
+  animation-direction: reverse;
+}
+
+.from-left {
+  animation-name: left;
+  animation-direction: reverse;
+}
+
+@keyframes left {
+  from {
+    left: 0;
+  }
+  to {
+    left: -100%;
+  }
+}
+@keyframes right {
+  from {
+    left: 100%;
+  }
+  to {
+    left: 0;
+  }
+}
+.phone__base__vertical {
+  z-index: 2;
+  position: absolute;
+  top: 53px;
+  left: 112px;
+}
+
+.phone__shadow__vertical {
+  position: absolute;
+  top: 53px;
+  left: 112px;
+}
+
+.phone__background__vertical {
+  z-index: 3;
+  display: inline-block;
+  position: absolute;
+  top: 118px;
+  left: 126px;
+  width: 188px;
+  height: 333px;
+  background: url("../assets/img/slider/ph-background-vert.png");
+  background-position-x: -14px;
+  background-position-y: -135px;
+}
+
+.phone__base__horizontal {
+  position: absolute;
+  z-index: 2;
+  transform: rotate(90deg);
+  top: 52px;
+  left: 546px;
+}
+
+.phone__shadow__horizontal {
+  position: absolute;
+  transform: scaleX(-1) rotate(-90deg);
+  top: 52px;
+  left: 546px;
+}
+
+.phone__background__horizontal {
+  z-index: 3;
+  display: inline-block;
+  position: absolute;
+  top: 188px;
+  left: 484px;
+  width: 334px;
+  height: 188px;
+  background: url("../assets/img/slider/ph-background-hor.png");
+  background-position-x: -124px;
+  background-position-y: -119px;
+}
+
 .wrapper {
   display: block;
   width: 1020px;
@@ -69,6 +212,11 @@ body {
 .header__wrapper {
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
+}
+
+.slider__wrapper {
+  position: relative;
+  overflow: hidden;
 }
 
 /*

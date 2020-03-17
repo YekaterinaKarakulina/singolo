@@ -1,0 +1,27 @@
+.phone__base__horizontal {
+    position: absolute;
+    z-index: 2;
+    transform: rotate(90deg);
+    top: 52px;
+    left: 546px;
+}
+
+.phone__shadow__horizontal {
+    position: absolute;
+    transform: scaleX(-1) rotate(-90deg);
+    top: 52px;
+    left: 546px;
+}
+
+.phone__background__horizontal {
+    z-index: 3;
+    display: inline-block;
+    position: absolute;
+    top: 188px;
+    left: 484px;
+    width: 334px;
+    height: 188px;
+    background: url('../assets/img/slider/ph-background-hor.png');
+    background-position-x: -124px;
+    background-position-y: -119px;
+}

@@ -5,9 +5,14 @@
 //base
 @import "./base/base";
 @import "./base/logo";
+@import "./base/arrows";
 
 //components
 @import "./components/navigation";
+@import "./components/slider";
+@import "./components/phone-vertical";
+@import "./components/phone_horizontal";
+
 
 //layouts
 @import "./layouts/wrapper";

@@ -1,0 +1,22 @@
+.control {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+}
+
+.arrow {
+    position: absolute;
+    height: 27px;
+    width: 16px;
+    top: 281px;
+    cursor: pointer;
+    &.left {
+      background-image: url('../assets/img/slider/arrow.svg');
+    left: 42px;
+    }
+    &.right {
+      background-image: url('../assets/img/slider/arrow.svg');
+    transform: rotate(180deg);
+    left: 964px;
+    }
+}
