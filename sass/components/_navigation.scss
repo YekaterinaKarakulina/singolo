@@ -22,10 +22,13 @@
     a {
         text-decoration: none;
         color: $color-light;
-    }
-    .active {
-        a {
+        &.active {
             color: $color-additional;
         }
     }
+   // .active {
+     //   a {
+       //     color: $color-additional;
+       // }
+    //}
 }
