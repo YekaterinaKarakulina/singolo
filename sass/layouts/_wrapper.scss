@@ -16,5 +16,28 @@
 
 .services__wrapper {
     background-color: $color-light-darken;
-    border-bottom: 5px solid $color-light;
+    border-bottom: 6px solid $color-light;
 }
+
+
+.portfolio__wrapper {
+    background-color: $color-primary;
+    border-bottom: 6px solid $color-primary-light;
+}
+
+.about-us__wrapper {
+    background-color: $color-light-darken;
+    border-bottom: 6px solid $color-light;
+}
+
+.get-a-quote__wrapper {
+    background-color: $color-additional;
+    border-bottom: 6px solid $color-additional-light;
+}
+
+
+.footer__wrapper {
+    height: 76px;
+    background-color: #2d303a;
+}
+

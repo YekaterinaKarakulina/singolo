@@ -1,0 +1,96 @@
+.portfolio__title {
+    color: $color-dark;
+    @include font(3.0rem, 3.6rem, 900);
+    padding: 63px 0px 0px 41px;
+    letter-spacing: 0.1px;
+    text-align: left;
+}
+
+.portfolio__content {
+    color: $color-dark-lighten;
+    @include font(1.8rem, 3.0rem, 300);
+    letter-spacing: -0.22px;
+    text-align: left;
+    margin: 0;
+    padding: 16px 0px 0px 40px;
+}
+
+.portfolio__tags-list {
+    padding: 10px 0px 10px 40px;
+}
+
+.picture {
+    width: 220px;
+    height: 187px;
+    cursor: pointer;
+    &.picture-1 {
+        background-image: url('../assets/img/portfolio/1.png');
+        background-position: -8px -11px;
+    }
+    
+    &.picture-2 {
+        background-image: url('../assets/img/portfolio/2.png');
+        background-position: -82px -43px;
+    }
+    
+    &.picture-3 {
+        background-image: url('../assets/img/portfolio/3.png');
+        background-position: -11px -1px;
+    }
+    
+    &.picture-4 {
+        background-image: url('../assets/img/portfolio/4.png');
+        background-position: -24px -2px;
+    }
+    
+    &.picture-5 {
+        background-image: url('../assets/img/portfolio/5.png');
+        background-position: -10px -16px;
+    }
+    
+    &.picture-6 {
+        background-image: url('../assets/img/portfolio/6.png');
+        background-position: -16px -4px;
+    }
+    
+    &.picture-7 {
+        background-image: url('../assets/img/portfolio/7.png');
+        background-position: -31px -39px;
+    }
+    
+    &.picture-8 {
+        background-image: url('../assets/img/portfolio/8.png');
+        background-position: -24px -32px;
+    }
+    
+    &.picture-9 {
+        background-image: url('../assets/img/portfolio/9.png');
+        background-position: -16px -2px;
+    }
+    
+    &.picture-10 {
+        background-image: url('../assets/img/portfolio/10.png');
+        background-position: -141px -113px;
+    }
+    
+    &.picture-11 {
+        background-image: url('../assets/img/portfolio/11.png');
+        background-position: -144px -175px;
+    }
+    
+    &.picture-12 {
+        background-image: url('../assets/img/portfolio/12.png');
+        background-position: -36px -60px;
+    }
+}
+
+.image_border {
+    z-index: 5;
+    display: inline-block;
+    border: 5px solid  $color-additional;
+    width: 210px;
+    height: 177px;
+    background: transparent;
+}
+
+

@@ -6,7 +6,8 @@
 @import "./base/base";
 @import "./base/logo";
 @import "./base/arrows";
-@import "./base/icon";
+@import "./base/icons";
+@import "./base/tags";
 
 //components
 @import "./components/navigation";
@@ -14,7 +15,10 @@
 @import "./components/phone-vertical";
 @import "./components/phone_horizontal";
 @import "./components/services";
-
+@import "./components/portfolio";
+@import "./components/about-us";
+@import "./components/get-a-quote";
+@import "./components/footer";
 
 //layouts
 @import "./layouts/wrapper";

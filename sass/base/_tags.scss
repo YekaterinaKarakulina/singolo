@@ -1,0 +1,44 @@
+.tags {
+    display: flex;
+}
+
+.tag {
+    color: $color-dark-lighten;
+    border: 1px solid $color-dark;
+    border-radius: 5px;
+    @include font(1.2rem, 2.0rem);
+    text-align: left;
+    &.tag-all {
+        margin-left: 1px;
+        padding: 0px 6px 0px 7px;
+    }
+    
+    &.tag-web-design {
+       margin-left: 10px;
+        padding: 0px 6px 0px 6px;
+    }
+    
+    &.tag-graphic-design {
+        margin-left: 10px;
+        padding: 0px 5px 0px 6px;
+    }
+    
+    &.tag-artwork {
+        margin-left: 10px;
+        padding: 0px 6px 0px 5px;
+    }
+
+}
+
+.tag.active { 
+    background-color: $color-tag-background;
+    color: $color-tag-text;
+    border: 1px solid $color-tag-border;
+}
+
+.tag:not(.active):hover {
+    color: $color-tag-text;
+    border: 1px solid $color-tag-border;
+    cursor: pointer;
+}
+
