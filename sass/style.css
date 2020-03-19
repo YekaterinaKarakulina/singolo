@@ -1,11 +1,11 @@
 @charset "UTF-8";
 html {
   font-size: 10px;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: "Lato", sans-serif;
-  scroll-behavior: smooth;
 }
 
 .logo {
@@ -562,6 +562,15 @@ textarea::placeholder {
   font-weight: 400;
 }
 
+input, textarea {
+  font-family: "Lato", sans-serif;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  font-weight: normal;
+  font-style: normal;
+  color: #ffffff;
+}
+
 input::placeholder {
   padding-left: 16px;
 }
@@ -770,7 +779,7 @@ textarea::placeholder {
   background-color: #2d303a;
 }
 
-.ttt {
+.yakor {
   position: absolute;
   top: -95px;
 }

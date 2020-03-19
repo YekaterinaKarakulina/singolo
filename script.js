@@ -1,5 +1,8 @@
 window.onload = function() {
 	
+	let swipeElement = document.querySelector('.carousel');
+
+	//Header navigation onload behavior
 	const currentPos = window.scrollY;
 	const divs = document.querySelectorAll('.wrapper');
 	const links = document.querySelectorAll('#navigation a');
@@ -17,7 +20,6 @@ window.onload = function() {
 
 	//Header navigation
 	addNavigationMenuClickHandler();
-	
 
 	//Slider phones background image on/off
 	addVerticalPhoneHandler();
@@ -26,6 +28,9 @@ window.onload = function() {
 	//Slider carousel 
 	addSliderControlLeftHandler();
 	addSliderControlRightHandler();
+
+	//Swiper carousel
+	swipeDetect(swipeElement);
 
 	//Portfolio tags
 	addPortfolioTagsHandler();
@@ -40,10 +45,8 @@ window.onload = function() {
 	addCloseButtonHandler();
 }
 
-
-
+/*-----Header navigation-----*/
 const addNavigationMenuClickHandler = ()=> {
-	
 	document.addEventListener('scroll', ()=> {
 		const currentPos = window.scrollY;
 		const divs = document.querySelectorAll('.wrapper');
@@ -62,6 +65,7 @@ const addNavigationMenuClickHandler = ()=> {
 	});
 }
 
+/*-----Slider phones background image on/off-----*/
 let isVisibleVertPhone = false;
 let isVisibleHorPhone = false;
 
@@ -87,8 +91,7 @@ const addHorizontalPhoneHandler = ()=> {
 	});
 }
 
-
-
+/*-----Slider carousel-----*/
 let items = document.querySelectorAll('.carousel .slide');
 let currentItem = 0;
 let isEnabled = true;
@@ -142,12 +145,89 @@ function previousItem(n) {
 	showItem('from-left');
 }
 
+/*-----Swiper carousel-----*/
+const swipeDetect = (el) => {
+	let surface = el;
+	let startX = 0;
+	let startY = 0;
+	let distX = 0;
+	let distY = 0;
 
+	let startTime = 0;
+	let elapsedTime = 0;
+
+	let threshold = 150;
+	let restraint = 100;
+	let allowedTime = 300;
+
+	surface.addEventListener('mousedown', function(e) {
+		startX = e.pageX;
+		startY = e.pageY;
+		startTime = new Date().getTime();
+		e.preventDefault();
+	});
+
+	surface.addEventListener('mouseup', function(e) {
+		distX = e.pageX - startX;
+		distY = e.pageY - startY;
+		elapsedTime = new Date().getTime() - startTime;
+
+		if(elapsedTime <= allowedTime) {
+			if(Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+				if(distX>0) {
+					if(isEnabled) {
+						previousItem(currentItem);
+					}
+				} else {
+					if(isEnabled) {
+						nextItem(currentItem);
+					}
+				}
+			}
+		}
+		e.preventDefault();
+	});
+
+	surface.addEventListener('touchstart', function(e) {
+		let touchObject = e.changedTouches[0];
+		startX = touchObject.pageX;
+		startY = touchObject.pageY;
+		startTime = new Date().getTime();
+		e.preventDefault();
+	});
+
+	surface.addEventListener('touchmove', function(e) {
+		e.preventDefault();
+	});
+
+	surface.addEventListener('touchend', function(e) {
+		let touchObject = e.changedTouches[0];
+		distX = touchObject.pageX - startX;
+		distY = touchObject.pageY - startY;
+		elapsedTime = new Date().getTime() - startTime;
+
+		if(elapsedTime <= allowedTime) {
+			if(Math.abs(distX) >= threshold && Math.abs(distY) <= restraint) {
+				if(distX>0) {
+					if(isEnabled) {
+						previousItem(currentItem);
+					}
+				} else {
+					if(isEnabled) {
+						nextItem(currentItem);
+					}
+				}
+			}
+		}
+		e.preventDefault();
+	});
+}
+
+/*-----Portfolio tags-----*/
 const PORTFOLIO_TAGS = document.querySelector('.portfolio__tags-list');
 let previousClickedImage = '';
 let clickedImage = '';
 let borderBlock = '<span class="image_border"></span>';
-
 
 const PORTFOLIO_IMAGES = ['<span class="picture picture-1"></span>', '<span class="picture picture-2"></span>',
 							'<span class="picture picture-3"></span>', '<span class="picture picture-4"></span>',
@@ -155,7 +235,6 @@ const PORTFOLIO_IMAGES = ['<span class="picture picture-1"></span>', '<span clas
 							'<span class="picture picture-7"></span>', '<span class="picture picture-8"></span>',
 							'<span class="picture picture-9"></span>', '<span class="picture picture-10"></span>',
 							'<span class="picture picture-11"></span>', '<span class="picture picture-12"></span>'];
-
 
 const addPortfolioTagsHandler = ()=> {
 	PORTFOLIO_TAGS.addEventListener('click', (event) => {
@@ -180,6 +259,7 @@ const mixPortfolioImages = ()=> {
 	document.getElementById('portfolio__images').innerHTML = newInnerHtml;
 }
 
+/*-----Portfolio images handler-----*/
 const addPortfolioImageHandler = ()=> {
 	document.getElementById('portfolio__images').addEventListener('click', (event) => {
 		if(event.target.classList.contains('picture')) {
@@ -191,8 +271,7 @@ const addPortfolioImageHandler = ()=> {
 	});
 }
 
-
-
+/*-----Form submit-----*/
 const SUBMIT_BUTTON = document.getElementById('submit-button');
 const CLOSE_BUTTON = document.getElementById('close-button');
 const SUBJECT = document.getElementById('subject');
@@ -202,7 +281,6 @@ const DESCRIPTION = document.getElementById('description');
 const MESSAGE_BLOCK = document.getElementById('message-block');
 const INPUT_NAME = document.querySelector('.input__name');
 const INPUT_EMAIL = document.querySelector('.input__email');
-
 
 const addSubmitButtonHandler = () => {
 	SUBMIT_BUTTON.addEventListener('click', event => {
@@ -240,6 +318,7 @@ const createMessageDescription = ()=> {
 	}
 }
 
+/*-----Modal window close button-----*/
 const addCloseButtonHandler = () => {
 	CLOSE_BUTTON.addEventListener('click', event => {
 		SUBJECT_RESULT.innerText = '';

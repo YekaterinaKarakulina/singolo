@@ -52,6 +52,12 @@ textarea::placeholder {
     font-weight: 400;  
 }
 
+input, textarea {
+    font-family: 'Lato', sans-serif;  
+    @include font(1.2rem, 2.2rem);
+    color: $color-light;
+}
+
 input::placeholder {
     padding-left: 16px;
 }
