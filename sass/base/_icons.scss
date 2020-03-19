@@ -1,0 +1,32 @@
+.item__icon {
+    padding-left: 5px;
+}
+
+.icon {
+    display: inline-block;
+    width: 33px;
+    height: 33px;
+    margin-right: 4px;
+}
+
+.icon:hover{
+    cursor: pointer;
+    border: 1px solid #666d89;
+    border-radius: 5px;
+}
+
+.icon_facebook {
+    background-image: url('../assets/img/social-media-icons/icon-facebook.svg');
+}
+
+.icon_google {
+    background-image: url('../assets/img/social-media-icons/icon-google.svg');
+}
+
+.icon_twitter {
+    background-image: url('../assets/img/social-media-icons/icon-twitter.svg');
+}
+
+.icon_linkedIn {
+    background-image: url('../assets/img/social-media-icons/icon-linkedIn.svg');
+}

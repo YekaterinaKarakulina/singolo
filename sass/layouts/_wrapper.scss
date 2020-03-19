@@ -1,0 +1,58 @@
+.wrapper {
+    display: block;
+    width: 1020px;
+    margin: 0 auto;
+
+}
+
+.header__wrapper {
+    background-color: $color-primary;  
+    border-bottom: 6px solid $color-primary-light; 
+    position: fixed; 
+    left: calc(50% - 1020px/2);
+    z-index: 100;
+   
+}
+
+.slider__wrapper {
+    position: relative;  
+    overflow: hidden;
+    top: 95px; 
+    height: 695px;
+}
+
+.services__wrapper {
+    background-color: $color-light-darken;
+    border-bottom: 6px solid $color-light;
+    position: relative;
+}
+
+
+.portfolio__wrapper {
+    background-color: $color-primary;
+    border-bottom: 6px solid $color-primary-light;
+    position: relative;
+}
+
+.about-us__wrapper {
+    background-color: $color-light-darken;
+    border-bottom: 6px solid $color-light;
+    position: relative;
+}
+
+.get-a-quote__wrapper {
+    background-color: $color-additional;
+    border-bottom: 6px solid $color-additional-light;
+    position: relative;
+}
+
+
+.footer__wrapper {
+    height: 76px;
+    background-color: $color-primary;
+}
+
+.yakor {
+    position: absolute;
+    top: -95px;
+}

@@ -1,0 +1,28 @@
+.phone__base__vertical {
+    z-index: 2;
+    position: absolute;
+    top: 53px;
+    left: 112px;
+}
+
+.phone__shadow__vertical {
+    position: absolute;
+    top: 53px;
+    left: 112px; 
+}
+
+.phone__background__vertical {
+    z-index: 3;
+    display: inline-block;
+    position: absolute;
+    top: 118px;
+    left: 126px;
+    width: 188px;
+    height: 333px;
+    background: url('../assets/img/slider/ph-background-vert.png');
+    background-position-x: -14px;
+    background-position-y: -135px;
+    &.hidden {
+        display: none;
+    }
+}

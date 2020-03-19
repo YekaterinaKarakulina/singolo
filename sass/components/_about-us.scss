@@ -1,0 +1,69 @@
+.about-us__title {
+    color: $color-dark;
+    @include font(3.0rem, 3.6rem, 900);
+    text-align: left;
+    padding: 62px 40px 0px 40px;
+}
+
+.about-us__content {
+    color: $color-dark-lighten;
+    @include font(1.8rem, 3.0rem, 300);
+    text-align: left;
+    padding: 17px 40px 17px 40px;
+}
+
+.layout-3-col-about-us {
+    display: flex;
+    justify-content: space-between;;
+    padding: 26px 40px 47px;
+}
+
+.photo {
+    display: inline-block;
+    width: 300px;
+    height: 300px;
+}
+
+.photo__Adam-Jensen {
+    background-image: url('../assets/img/about-us/Adam-Jensen.png');
+}
+
+.photo__Desmond-Miles {
+    background-image: url('../assets/img/about-us/Desmond-Miles.png');
+}
+
+.photo__Scolara-Visari {
+    background-image: url('../assets/img/about-us/Scolara-Visari.png');
+}
+
+.personal-data { 
+    width: 300px;
+}
+
+.person__name {
+    display: block;
+    max-width: 300px;
+    color: $color-dark;
+    @include font(1.8rem, 1.8rem, 900);
+    max-height: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+    padding: 15px 0 10px;    
+}
+
+.person__description {
+    color: $color-dark-lighten;
+    @include font(1.2rem, 2.2rem);
+    text-align: justify;
+}
+
+.person__social-media {
+    padding: 19px 0;
+}
+
+
+
+
+
