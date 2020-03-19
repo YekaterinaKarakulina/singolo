@@ -8,7 +8,6 @@ window.onload = function() {
 		if((element.offsetTop - 95) <= currentPos && (element.offsetTop + element.offsetHeight - 95) > currentPos) {
 			links.forEach((link) => {
 				link.classList.remove('active');
-				console.log('rem');
 				if((element.firstElementChild.getAttribute('id')) === link.getAttribute('href').substring(1)) {
 					link.classList.add('active');
 				}
@@ -21,12 +20,12 @@ window.onload = function() {
 	
 
 	//Slider phones background image on/off
-	//addVerticalPhoneHandler();
-	//addHorizontalPhoneHandler();
+	addVerticalPhoneHandler();
+	addHorizontalPhoneHandler();
 
 	//Slider carousel 
-	//addSliderControlLeftHandler();
-	//addSliderControlRightHandler();
+	addSliderControlLeftHandler();
+	addSliderControlRightHandler();
 
 	//Portfolio tags
 	//addPortfolioTagsHandler();
@@ -55,13 +54,94 @@ const addNavigationMenuClickHandler = ()=> {
 				links.forEach((link) => {
 					link.classList.remove('active');
 					if((element.firstElementChild.getAttribute('id')) === link.getAttribute('href').substring(1)) {
-						console.log('add', link);
 						link.classList.add('active');
 					}
 				})
 			}
 		})
 	});
+}
+
+let isVisibleVertPhone = false;
+let isVisibleHorPhone = false;
+
+const addVerticalPhoneHandler = ()=> {
+	document.getElementById('phone__base__vertical').addEventListener('click', ()=> {
+		if(isVisibleVertPhone) {
+			document.getElementById('phone__background__vertical').classList.remove('hidden');
+		} else {
+			document.getElementById('phone__background__vertical').classList.add('hidden');
+		}
+		isVisibleVertPhone = !isVisibleVertPhone;
+	});
+}
+
+const addHorizontalPhoneHandler = ()=> {
+	document.getElementById('phone__base__horizontal').addEventListener('click', ()=> {
+		if(isVisibleHorPhone) {
+			document.getElementById('phone__background__horizontal').classList.remove('hidden');
+		} else {
+			document.getElementById('phone__background__horizontal').classList.add('hidden');
+		}
+		isVisibleHorPhone = !isVisibleHorPhone;
+	});
+}
+
+
+let previousClickedImage = '';
+let clickedImage = '';
+let borderBlock = '<span class="image_border"></span>';
+let items = document.querySelectorAll('.carousel .slide');
+let currentItem = 0;
+let isEnabled = true;
+
+const addSliderControlLeftHandler = ()=> {
+	document.querySelector('.control.left').addEventListener('click', function() {
+		if (isEnabled) {
+			previousItem(currentItem);
+		}
+	});
+}
+
+const addSliderControlRightHandler = ()=> {
+	document.querySelector('.control.right').addEventListener('click', function() {
+		if (isEnabled) { 
+			nextItem(currentItem);
+		}
+	});
+}
+
+function changeCurrentItem(n) {
+	currentItem = (n + items.length) % items.length;
+}
+
+function hideItem(direction) {
+	isEnabled = false;
+	items[currentItem].classList.add(direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('current', direction);
+	});
+}
+
+function showItem(direction) {
+	items[currentItem].classList.add('next', direction);
+	items[currentItem].addEventListener('animationend', function() {
+		this.classList.remove('next', direction);
+		this.classList.add('current');
+		isEnabled = true;
+	});
+}
+
+function nextItem(n) {
+	hideItem('to-left');
+	changeCurrentItem(n + 1);
+	showItem('from-right');
+}
+
+function previousItem(n) {
+	hideItem('to-right');
+	changeCurrentItem(n - 1);
+	showItem('from-left');
 }
 
 
@@ -79,12 +159,7 @@ const addNavigationMenuClickHandler = ()=> {
 
 
 
-
-
-
-
-
-
+/*
 const PORTFOLIO_TAGS = document.querySelector('.portfolio-tags-list');
 const SUBMIT_BUTTON = document.getElementById('submit-button');
 const CLOSE_BUTTON = document.getElementById('close-button');
@@ -111,7 +186,7 @@ let currentItem = 0;
 let isEnabled = true;
 let isVisibleVertPhone = false;
 let isVisibleHorPhone = false;
-
+*/
 
 
 

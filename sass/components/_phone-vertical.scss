@@ -22,4 +22,7 @@
     background: url('../assets/img/slider/ph-background-vert.png');
     background-position-x: -14px;
     background-position-y: -135px;
+    &.hidden {
+        display: none;
+    }
 }

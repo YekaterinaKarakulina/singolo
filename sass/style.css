@@ -177,10 +177,10 @@ body {
   border-bottom: 6px solid #ea676b;
 }
 
+/*
 .hidden {
-  display: none;
-}
-
+    display: none;
+}*/
 .current,
 .next {
   display: block;
@@ -251,6 +251,9 @@ body {
   background-position-x: -14px;
   background-position-y: -135px;
 }
+.phone__background__vertical.hidden {
+  display: none;
+}
 
 .phone__base__horizontal {
   position: absolute;
@@ -278,6 +281,9 @@ body {
   background: url("../assets/img/slider/ph-background-hor.png");
   background-position-x: -124px;
   background-position-y: -119px;
+}
+.phone__background__horizontal.hidden {
+  display: none;
 }
 
 .services__title {

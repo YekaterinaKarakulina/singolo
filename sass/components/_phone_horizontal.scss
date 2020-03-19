@@ -24,4 +24,7 @@
     background: url('../assets/img/slider/ph-background-hor.png');
     background-position-x: -124px;
     background-position-y: -119px;
+    &.hidden {
+        display: none;
+    }
 }
