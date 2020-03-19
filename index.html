@@ -209,15 +209,15 @@
                 <span class="ttt" id="contact"></span>
                 <div class="get-a-quote__title">Get a Quote</div>
                 <div class="get-a-quote__content">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</div>
-                <form action="https://www.w3schools.com/action_page.php" target="_blank" method="POST">
+                <form id="form" action="https://www.w3schools.com/action_page.php" target="_blank" method="POST">
                     <div class="layout-2-col get-a-quote__layout">
                         <div class="first-col">
                             <fieldset class="required-fields">
-                                <input class="input input__name" type="text" name="name" id="name" placeholder="Name(Required)" required>
-                                <input class="input input__email" type="email" name="email" id="email" placeholder="Email(Required)" required> 
+                                <input class="input input__name" type="text" name="name" id="name" placeholder="Name(Required)" required autocomplete="off">
+                                <input class="input input__email" type="email" name="email" id="email" placeholder="Email(Required)" required autocomplete="off"> 
                             </fieldset>
                             <fieldset class="optional-fields">
-                                <input class="input input__subject" type="text" name="subject" id="subject" placeholder="Subject">
+                                <input class="input input__subject" type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off">
                                 <textarea class="input input__description" name="description" id="description" style="resize: none;" id="description" placeholder="Describe your project in detail"></textarea>
                             </fieldset>
                         </div>
