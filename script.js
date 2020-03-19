@@ -8,7 +8,8 @@ window.onload = function() {
 		if((element.offsetTop - 95) <= currentPos && (element.offsetTop + element.offsetHeight - 95) > currentPos) {
 			links.forEach((link) => {
 				link.classList.remove('active');
-				if((element.parentElement.getAttribute('id')) === link.getAttribute('href').substring(1)) {
+				console.log('rem');
+				if((element.firstElementChild.getAttribute('id')) === link.getAttribute('href').substring(1)) {
 					link.classList.add('active');
 				}
 			})
@@ -17,7 +18,6 @@ window.onload = function() {
 
 	//Header navigation
 	addNavigationMenuClickHandler();
-	//addclick();
 	
 
 	//Slider phones background image on/off
@@ -65,19 +65,6 @@ const addNavigationMenuClickHandler = ()=> {
 }
 
 
-const NAVIGATION_MENU = document.getElementById('navigation');
-
-const addclick = ()=> {
-	NAVIGATION_MENU.addEventListener('click', (event) => {
-		console.log(event.target);
-		if(event.target.parentElement.classList.contains('nav-item')) {
-			const divs = document.querySelectorAll('.wrapper');
-			divs.forEach((element) => {
-				console.log(element.innerText);
-			})
-		}
-	});
-}
 
 
 
