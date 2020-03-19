@@ -28,10 +28,10 @@ window.onload = function() {
 	addSliderControlRightHandler();
 
 	//Portfolio tags
-	//addPortfolioTagsHandler();
+	addPortfolioTagsHandler();
 
 	//Portfolio images handler
-//	addPortfolioImageHandler();
+	addPortfolioImageHandler();
 
 	//Form submit 
 	//addSubmitButtonHandler();
@@ -88,9 +88,7 @@ const addHorizontalPhoneHandler = ()=> {
 }
 
 
-let previousClickedImage = '';
-let clickedImage = '';
-let borderBlock = '<span class="image_border"></span>';
+
 let items = document.querySelectorAll('.carousel .slide');
 let currentItem = 0;
 let isEnabled = true;
@@ -145,14 +143,59 @@ function previousItem(n) {
 }
 
 
+const PORTFOLIO_TAGS = document.querySelector('.portfolio__tags-list');
+let previousClickedImage = '';
+let clickedImage = '';
+let borderBlock = '<span class="image_border"></span>';
+
+
+const PORTFOLIO_IMAGES = ['<span class="picture picture-1"></span>', '<span class="picture picture-2"></span>',
+							'<span class="picture picture-3"></span>', '<span class="picture picture-4"></span>',
+							'<span class="picture picture-5"></span>', '<span class="picture picture-6"></span>',
+							'<span class="picture picture-7"></span>', '<span class="picture picture-8"></span>',
+							'<span class="picture picture-9"></span>', '<span class="picture picture-10"></span>',
+							'<span class="picture picture-11"></span>', '<span class="picture picture-12"></span>'];
+
+
+
+const addPortfolioTagsHandler = ()=> {
+	PORTFOLIO_TAGS.addEventListener('click', (event) => {
+		if(event.target.classList.contains('tag')) {
+			PORTFOLIO_TAGS.querySelectorAll('.tag').forEach(element => element.classList.remove('active'));
+			event.target.classList.add('active');
+			mixPortfolioImages();
+		}
+	});
+}
+
+
+
+const mixPortfolioImages = ()=> {
+	var PORTFOLIO_IMAGES_COPY = [];
+	let newInnerHtml = '';
+	for(var i=0; i<PORTFOLIO_IMAGES.length; i++) {
+		PORTFOLIO_IMAGES_COPY.push(PORTFOLIO_IMAGES[i]); }
+	for(var i=0; i< PORTFOLIO_IMAGES.length; i++) {
+		var randomNumber = Math.floor(Math.random() * PORTFOLIO_IMAGES_COPY.length);
+		var randomImage = PORTFOLIO_IMAGES_COPY[randomNumber];
+		PORTFOLIO_IMAGES_COPY.splice(randomNumber,1);
+		newInnerHtml = newInnerHtml + randomImage; }
+	document.getElementById('portfolio__images').innerHTML = newInnerHtml;
+}
 
 
 
 
-
-
-
-
+const addPortfolioImageHandler = ()=> {
+	document.getElementById('portfolio__images').addEventListener('click', (event) => {
+		if(event.target.classList.contains('picture')) {
+			previousClickedImage = clickedImage;
+			previousClickedImage.innerHTML = '';
+			clickedImage = event.target;
+			clickedImage.innerHTML = borderBlock;
+		} 
+	});
+}
 
 
 
