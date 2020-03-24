@@ -2,28 +2,31 @@
     position: absolute;
     z-index: 2;
     transform: rotate(90deg);
-    top: 52px;
-    left: 546px;
+    top: 9%;
+    left: 53.5%;
+    width: 21.079%;
 }
 
 .phone__shadow__horizontal {
     position: absolute;
     transform: scaleX(-1) rotate(-90deg);
-    top: 52px;
-    left: 546px;
+    top: 9%;
+    left: 53.5%;
+    width: 23.5%;
 }
 
 .phone__background__horizontal {
     z-index: 3;
     display: inline-block;
     position: absolute;
-    top: 188px;
-    left: 484px;
-    width: 334px;
-    height: 188px;
+    top: 31.5%;
+    left: 47.5%;
+    width: 32.7%;
+    height: 31.5%;
     background: url('../assets/img/slider/ph-background-hor.png');
-    background-position-x: -124px;
-    background-position-y: -119px;
+    background-position-x: 50%;
+    background-position-y: 31%;
+    background-size: 172% 311%;
     &.hidden {
         display: none;
     }

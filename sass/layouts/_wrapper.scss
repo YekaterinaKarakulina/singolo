@@ -6,8 +6,6 @@
     @include media-laptop {
         margin: 0 auto;
     }
-   
-
 }
 
 .header__wrapper {
@@ -17,18 +15,21 @@
     @include media-tablet {
         border-bottom: none;
     }
-   
 }
-
-
-
 
 .slider__wrapper {
     position: relative;  
     overflow: hidden;
     top: 95px; 
-    height: 695px;
+    max-height: 600px;
+    @include media-tablet {
+        top: 89px;
+    }
 }
+
+
+
+
 
 .services__wrapper {
     background-color: $color-light-darken;

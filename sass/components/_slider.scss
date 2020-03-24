@@ -5,19 +5,17 @@
 }
 
 .slide2 {
-    height: 594px;
+   // height: 594px;
+    height: calc(100vw * 0.58);
     border-bottom: 6px solid $color-slide2;
 }
 
 .background {
-    height: 594px;
+    height: calc(100vw * 0.58);
+    max-height: 594px;
     background-color: $color-additional; 
     border-bottom: 6px solid $color-additional-light;
 }
-/*
-.hidden {
-    display: none;
-}*/
 
 .current,
 .next {
