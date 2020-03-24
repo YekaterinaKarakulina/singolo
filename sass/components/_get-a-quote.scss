@@ -154,7 +154,7 @@ textarea::placeholder {
     height: 100vh;
     top: 0;
     left: 0;
-    background: #0008;
+    background: $color-transparent;
 }
 
 .message-block.hidden {

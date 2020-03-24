@@ -18,31 +18,34 @@ window.onload = function() {
 		}
 	})
 
+	//Hamburger menu
+	addHamburgerHandler();
+	
 	//Header navigation
 	addNavigationMenuClickHandler();
 
 	//Slider phones background image on/off
-	addVerticalPhoneHandler();
-	addHorizontalPhoneHandler();
+	//addVerticalPhoneHandler();
+	//addHorizontalPhoneHandler();
 
 	//Slider carousel 
-	addSliderControlLeftHandler();
-	addSliderControlRightHandler();
+	//addSliderControlLeftHandler();
+	//addSliderControlRightHandler();
 
 	//Swiper carousel
-	swipeDetect(swipeElement);
+	//swipeDetect(swipeElement);
 
 	//Portfolio tags
-	addPortfolioTagsHandler();
+	//addPortfolioTagsHandler();
 
 	//Portfolio images handler
-	addPortfolioImageHandler();
+	//addPortfolioImageHandler();
 
 	//Form submit 
-	addSubmitButtonHandler();
+	//addSubmitButtonHandler();
 
 	//Modal window close button
-	addCloseButtonHandler();
+	//addCloseButtonHandler();
 }
 
 /*-----Header navigation-----*/
@@ -326,5 +329,32 @@ const addCloseButtonHandler = () => {
 		MESSAGE_BLOCK.classList.add('hidden');
 		document.getElementById('form').reset();
 		event.preventDefault();
+	});
+}
+
+
+
+
+
+
+
+/*-----Hamburger menu-----*/
+const HAMBURGER = document.querySelector('.header__hamburger');
+var isHamburgerOpen = false;
+
+const addHamburgerHandler = ()=> {
+	HAMBURGER.addEventListener('click', (event) => {
+		if(isHamburgerOpen){
+			document.querySelector('.hamburger').classList.remove('hamburger_open');
+			document.querySelector('.hamburger__menu').style.display = 'none';
+			document.querySelector('.hamburger__menu-transparent').style.display = 'none';
+		} else {
+			currentViewWidth = window.innerWidth;
+			document.querySelector('.hamburger').classList.add('hamburger_open');
+			document.querySelector('.hamburger__menu').style.display = 'inline-block';
+			document.querySelector('.hamburger__menu-transparent').style.display = 'inline-block';
+		}
+		viewWidth = currentViewWidth;
+		isHamburgerOpen = !isHamburgerOpen;
 	});
 }

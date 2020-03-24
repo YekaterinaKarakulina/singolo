@@ -1,0 +1,42 @@
+%hamburger__line {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    background: $color-light;
+    height: 2.4px;
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    position: relative;
+    width: 25px;
+    height: 20px;
+    @include media-tablet {
+        display: inline-block;
+    }
+    &::before {
+        @extend %hamburger__line;
+        top: 0px;
+        left: 0;
+    }
+    &::after {
+        @extend %hamburger__line;
+        bottom: 0px;
+        left: 0;
+    }
+}
+
+.hamburger__line {
+    @extend %hamburger__line;
+    top: calc(50% - 1.2px);
+    left: 0;
+}
+
+.header__hamburger {
+    left: 20px;
+}
+
+.hamburger_open {
+   transform: rotate(90deg); 
+}

@@ -8,6 +8,8 @@
 @import "./base/arrows";
 @import "./base/icons";
 @import "./base/tags";
+@import "./base/normalize";
+@import "./base/hamburger";
 
 //components
 @import "./components/navigation";
@@ -19,6 +21,7 @@
 @import "./components/about-us";
 @import "./components/get-a-quote";
 @import "./components/footer";
+@import "./components/hamburger-menu";
 
 //layouts
 @import "./layouts/wrapper";

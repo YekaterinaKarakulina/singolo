@@ -1,0 +1,20 @@
+.hamburger__menu {
+    display: none;
+    @include media-tablet {
+        width: 74%;
+        height: 100vh;
+        background: $color-primary;
+        box-shadow: 0px -40px 20px rgba(0, 0, 0, 0.4);
+    }  
+}
+
+.hamburger__menu-transparent {
+    display: none;
+    @include media-tablet {
+        float: right;
+        width: calc(100vw - 74%);
+        height: 100vh;
+        background: $color-primary;
+        opacity: 0.6;
+    } 
+}
