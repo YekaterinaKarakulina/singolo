@@ -18,8 +18,14 @@
   &.left {
     background-image: url('../assets/img/slider/arrow.svg');
     margin-left: 3.92%;
+    @include media-laptop {
+      margin-left: 3.7%;
+    }
+    @include media-tablet {
+      margin-left: 2.6%;
+    }
     @include media-mobile {
-      margin-left: 10px;
+      margin-left: 2.6%;
     }
   }
   &.right {
@@ -27,8 +33,14 @@
     transform: rotate(180deg);
     float: right;
     margin-right: 3.92%;
+    @include media-laptop {
+      margin-right: 3.6%;
+    }
+    @include media-tablet {
+      margin-right: 2.6%;
+    }
     @include media-mobile {
-      margin-right: 10px;
+      margin-right: 2.6%;
     }
   }
 }

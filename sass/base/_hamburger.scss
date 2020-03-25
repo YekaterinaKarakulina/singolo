@@ -35,8 +35,10 @@
 
 .header__hamburger {
     left: 20px;
+    top: 6px;
 }
 
 .hamburger_open {
    transform: rotate(90deg); 
+   top: 2px;
 }

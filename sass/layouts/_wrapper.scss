@@ -12,6 +12,7 @@
     background-color: $color-primary;  
     border-bottom: 6px solid $color-primary-light; 
     position: fixed; 
+    z-index: 100;
     @include media-tablet {
         border-bottom: none;
     }
@@ -23,7 +24,7 @@
     top: 95px; 
     max-height: 600px;
     @include media-tablet {
-        top: 89px;
+        top: 71px;
     }
 }
 

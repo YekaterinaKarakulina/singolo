@@ -6,6 +6,10 @@
     padding: 30px 40px 29px;
     @include media-tablet { 
         margin-left: calc(50% - 116px);
+        padding: 24px 40px;
+    }
+    &.center {
+        margin-left: 1px;
     }
 }
 
@@ -18,4 +22,7 @@
         position: relative;
         color: $color-additional;
     } 
+    @include media-tablet {
+        @include font(1.9rem, 2.4rem, 700);
+    }
 }

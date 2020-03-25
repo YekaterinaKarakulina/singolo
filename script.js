@@ -25,15 +25,15 @@ window.onload = function() {
 	addNavigationMenuClickHandler();
 
 	//Slider phones background image on/off
-	//addVerticalPhoneHandler();
-	//addHorizontalPhoneHandler();
+	addVerticalPhoneHandler();
+	addHorizontalPhoneHandler();
 
 	//Slider carousel 
-	//addSliderControlLeftHandler();
-	//addSliderControlRightHandler();
+	addSliderControlLeftHandler();
+	addSliderControlRightHandler();
 
 	//Swiper carousel
-	//swipeDetect(swipeElement);
+	swipeDetect(swipeElement);
 
 	//Portfolio tags
 	//addPortfolioTagsHandler();
@@ -100,7 +100,7 @@ let currentItem = 0;
 let isEnabled = true;
 
 const addSliderControlLeftHandler = ()=> {
-	document.querySelector('.control.left').addEventListener('click', function() {
+	document.querySelector('.arrow.left').addEventListener('click', function() {
 		if (isEnabled) {
 			previousItem(currentItem);
 		}
@@ -108,7 +108,7 @@ const addSliderControlLeftHandler = ()=> {
 }
 
 const addSliderControlRightHandler = ()=> {
-	document.querySelector('.control.right').addEventListener('click', function() {
+	document.querySelector('.arrow.right').addEventListener('click', function() {
 		if (isEnabled) { 
 			nextItem(currentItem);
 		}
@@ -347,12 +347,14 @@ const addHamburgerHandler = ()=> {
 		if(isHamburgerOpen){
 			document.querySelector('.hamburger').classList.remove('hamburger_open');
 			document.querySelector('.hamburger__menu').style.display = 'none';
-			document.querySelector('.hamburger__menu-transparent').style.display = 'none';
+			document.querySelector('.hamburger-container').classList.add('hidden');
+			document.querySelector('.logo').classList.remove('center');
 		} else {
 			currentViewWidth = window.innerWidth;
 			document.querySelector('.hamburger').classList.add('hamburger_open');
 			document.querySelector('.hamburger__menu').style.display = 'inline-block';
-			document.querySelector('.hamburger__menu-transparent').style.display = 'inline-block';
+			document.querySelector('.hamburger-container').classList.remove('hidden')
+			document.querySelector('.logo').classList.add('center');
 		}
 		viewWidth = currentViewWidth;
 		isHamburgerOpen = !isHamburgerOpen;
