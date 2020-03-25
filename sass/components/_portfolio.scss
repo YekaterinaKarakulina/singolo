@@ -18,6 +18,8 @@
         padding: 16px 40px 9px;
     @include media-tablet {
         padding-bottom: 7px;
+        padding-left: 30px;
+        padding-right: 30px;
     }
     @include media-mobile {
         padding-bottom: 5px;
@@ -26,6 +28,9 @@
 
 .portfolio__tags-list {
    margin: 0 40px;
+   @include media-tablet {
+       margin: 0 30px;
+   }
 }
 
 .picture {
