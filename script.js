@@ -36,10 +36,10 @@ window.onload = function() {
 	swipeDetect(swipeElement);
 
 	//Portfolio tags
-	//addPortfolioTagsHandler();
+	addPortfolioTagsHandler();
 
 	//Portfolio images handler
-	//addPortfolioImageHandler();
+	addPortfolioImageHandler();
 
 	//Form submit 
 	//addSubmitButtonHandler();

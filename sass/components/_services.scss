@@ -26,8 +26,7 @@
 }
 
 .item__content {
-    width: 100%;
-    max-width: 220px;
+    width: 220px;
     margin: 0 20px 20px;
     @include media-laptop {
         margin-right: 53px;
@@ -36,6 +35,8 @@
     @include media-tablet {
         margin-right: 0px;
         margin-bottom: 15px;
+        width: 100%;
+        max-width: 220px;
     }
 }
 
@@ -55,7 +56,7 @@
     text-align: justify;
     height: 77px;
     overflow: hidden;
-    margin: 0 0 10px;
+    margin: 0;
     @include media-tablet {
         margin-bottom: 0;
     }

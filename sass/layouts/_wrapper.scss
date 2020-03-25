@@ -50,7 +50,14 @@
     background-color: $color-primary;
     border-bottom: 6px solid $color-primary-light;
     position: relative;
+    top: 95px;
+    @include media-laptop {
+        top: 71px;
+    }
 }
+
+
+
 
 .about-us__wrapper {
     background-color: $color-light-darken;
