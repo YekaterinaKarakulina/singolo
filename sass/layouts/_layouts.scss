@@ -6,7 +6,17 @@
 .layout-3-col {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    margin: 45px 24px 26px 35px;
+    margin: 45px 18px 26px 40px;
+    @include media-laptop {
+        grid-template-columns: 1fr 1fr;
+        padding-bottom: 17px;
+    }
+    @include media-tablet {
+        grid-template-columns: 1fr;
+        padding-bottom: 0px;
+        margin: 7px 43px 0px 32px;
+        margin-left: calc(50% - 150px);
+    }
 }
 
 .layout-4-col {
@@ -16,4 +26,3 @@
     overflow-y: hidden;
     padding: 9px 0 46px 40px;
 }
-
