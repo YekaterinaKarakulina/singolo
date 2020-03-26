@@ -2,34 +2,83 @@
     color: $color-section-light;
     @include font(3.0rem, 3.6rem, 900);
     text-align: left;
-    padding: 61px 40px 0px;
+    padding: 61px 40px 0;
     letter-spacing: -0.2px;
+    @include media-laptop {
+        padding-top: 7%;
+    }
+    @include media-tablet {
+        padding: 12% 30px 0;
+    }
 }
 
 .get-a-quote__content {
     color: $color-section-light;
     @include font(1.8rem, 3.0rem, 300);
-    padding: 17px 40px;
+    padding: 17px 40px 0;
     text-align: justify;
+    @include media-tablet {
+        padding: 17px 30px 0;
+    }
+}
+
+#form {
+    margin: 0 40px;
+    margin-top: 43px; 
+    margin-bottom: 58px;
+   
+    @include media-laptop {
+        margin-top: 4.2%;
+        margin-bottom: 5.2%;
+    }
+    @include media-tablet {
+        margin-left: 30px;
+        margin-right: 30px;
+    }
 }
 
 .get-a-quote__layout {
-    margin: 25px 40px 46px;
+    @include media-tablet {
+         flex-direction: column;
+    }
+}
+
+.first-col {
+    max-width: 619px; 
+}
+
+.second-col {
+    margin-left: 20px;
+    @include media-laptop {
+        margin-left: 30px;
+    }
+    @include media-tablet {
+        margin-left: 0;
+    }
 }
 
 .input {
     padding: 0;
-    width: 617px;
+    width: calc(100vw * 0.61);
+    max-width: 617px;
     border:1px solid $color-input;
     border-radius: 5px;
     background-color: $color-input;
     margin: 0px 0px 16px 0px;
     height: 36px;
+    @include media-laptop {
+       margin-bottom: 12px; 
+       width: calc(100vw * 0.575);
+    }
+    @include media-tablet {
+        max-width: 100vw;
+        width: calc(100vw - 60px);
+    }  
 }
 
 .input__description {
     padding: 0;
-    height: 202px;
+    height: 200px;
 }
 
 .required-fields, 
@@ -67,15 +116,18 @@ textarea::placeholder {
     padding-top: 7px;
 }
 
-.second-col {
-    margin-left: 22px;
-}
 
 .contact-information__title {
     color: $color-section-light;
     @include font(1.8rem, 1.8rem, 900);
     text-align: left;
-    padding: 4px 0px;
+    padding-bottom: 7px;
+    @include media-laptop {
+        padding-bottom: 5px;
+    }
+    @include media-tablet {
+        padding-top: 32px;
+    }
 }
 
 .contact-information__content,
@@ -89,7 +141,10 @@ textarea::placeholder {
 }
 
 .contact-information__contacts {
-    padding: 22px 0;
+    padding-top: 22px;
+    @include media-laptop {
+        padding-top: 3%;
+    }
 }
 
 .location__logo {
@@ -143,6 +198,14 @@ textarea::placeholder {
     padding: 10px;
 }
     
+
+.submit-button {
+    @include media-tablet {
+        width: calc(100vw - 60px);
+        text-align: center;
+    }
+}
+
 .submit-button:hover {
     cursor: pointer;
     color: $color-message;
