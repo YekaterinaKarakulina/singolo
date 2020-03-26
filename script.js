@@ -42,10 +42,10 @@ window.onload = function() {
 	addPortfolioImageHandler();
 
 	//Form submit 
-	//addSubmitButtonHandler();
+	addSubmitButtonHandler();
 
 	//Modal window close button
-	//addCloseButtonHandler();
+	addCloseButtonHandler();
 }
 
 /*-----Header navigation-----*/

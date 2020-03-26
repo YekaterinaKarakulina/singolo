@@ -85,7 +85,13 @@
 
 .footer__wrapper {
     height: 76px;
+   // height: calc(100vw * 0.1);
     background-color: $color-primary;
+    position: relative;
+    top: 95px;
+    @include media-laptop {
+        top: 71px;
+    }
 }
 
 .yakor {

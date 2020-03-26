@@ -1482,12 +1482,23 @@ textarea::placeholder {
   font-size: 12px;
   font-weight: 400;
   position: absolute;
-  margin: 32px 40px;
+  margin: 30px 40px;
+}
+@media (max-width: 767px) {
+  .copyright {
+    display: none;
+  }
 }
 
 .footer__social-media {
   display: inline-block;
-  margin: 21px 0px 0px 824px;
+  float: right;
+  margin: 21px 40px 0px;
+}
+@media (max-width: 767px) {
+  .footer__social-media {
+    margin: 21px calc(50% - 78px);
+  }
 }
 
 .hamburger__menu {
@@ -1615,6 +1626,13 @@ textarea::placeholder {
 .footer__wrapper {
   height: 76px;
   background-color: #2d303a;
+  position: relative;
+  top: 95px;
+}
+@media (max-width: 1019px) {
+  .footer__wrapper {
+    top: 71px;
+  }
 }
 
 .yakor {
