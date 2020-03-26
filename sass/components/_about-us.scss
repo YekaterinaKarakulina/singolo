@@ -2,26 +2,61 @@
     color: $color-dark;
     @include font(3.0rem, 3.6rem, 900);
     text-align: left;
-    padding: 62px 40px 0px 40px;
+    padding: 62px 40px 0px;
+    @include media-laptop {
+        padding-top: 7%;
+    }
 }
 
 .about-us__content {
     color: $color-dark-lighten;
     @include font(1.8rem, 3.0rem, 300);
     text-align: left;
-    padding: 17px 40px 17px 40px;
+    padding: 17px 40px 0;
+    @include media-tablet {
+        padding: 17px 30px 0;
+    }
 }
 
 .layout-3-col-about-us {
     display: flex;
-    justify-content: space-between;;
-    padding: 26px 40px 47px;
+    justify-content: space-between;
+    padding: 44px 40px 65px;
+    @include media-tablet {
+        flex-direction: column;
+        padding-left: calc(50% - 150px);
+    }
+    @include media-mobile {
+        padding: 2px 30px 8px;
+    }
+}
+
+.person { 
+    max-width: 300px;
+    width: calc(100vw * 0.295);
+    @include media-laptop {
+        width: calc(100vw * 0.285);
+    }
+    @include media-tablet {
+        width: calc(100vw - 60px);
+    }
 }
 
 .photo {
     display: inline-block;
-    width: 300px;
-    height: 300px;
+    max-width: 300px;
+    width: calc(100vw * 0.295);
+    max-height: 300px;
+    height: calc(100vw * 0.295);
+    background-size: 100% 100%;
+    @include media-laptop {
+        width: calc(100vw * 0.285);
+        height: calc(100vw * 0.285);
+    }
+    @include media-tablet {
+        width: calc(100vw - 60px);
+        height: calc(100vw - 60px);
+    }
 }
 
 .photo__Adam-Jensen {
@@ -36,10 +71,6 @@
     background-image: url('../assets/img/about-us/Scolara-Visari.png');
 }
 
-.personal-data { 
-    width: 300px;
-}
-
 .person__name {
     display: block;
     max-width: 300px;
@@ -50,20 +81,30 @@
     white-space: nowrap;
     text-overflow: ellipsis;
     text-align: left;
-    padding: 15px 0 10px;    
+    margin-top: 15px;    
+    @include media-laptop {
+        margin-top: 10px;  
+    }
+    @include media-tablet {
+        margin-top: 16px;
+    }
 }
 
 .person__description {
     color: $color-dark-lighten;
     @include font(1.2rem, 2.2rem);
     text-align: justify;
+    margin: 9px 0 19px;
+    @include media-laptop { 
+        margin: 7px 0 7px;
+    }
+    @include media-tablet {
+        margin-top: 11px;           
+    }
 }
 
 .person__social-media {
-    padding: 19px 0;
+    @include media-tablet {
+        padding-bottom: 34px;
+    }
 }
-
-
-
-
-

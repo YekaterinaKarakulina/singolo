@@ -63,6 +63,13 @@
     background-color: $color-light-darken;
     border-bottom: 6px solid $color-light;
     position: relative;
+    top: 95px;
+    @include media-laptop {
+        border-bottom: none;
+    }
+    @include media-laptop {
+        top: 71px;
+    }
 }
 
 .get-a-quote__wrapper {
