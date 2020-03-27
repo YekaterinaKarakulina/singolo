@@ -17,13 +17,10 @@ window.onload = function() {
 			})
 		}
 	})
-//Handler();
+
 	//Hamburger menu
 	addHamburgerHandler();
 	
-
-	
-
 	//Header navigation
 	addNavigationMenuClickHandler();
 
@@ -80,8 +77,11 @@ const addNavigationMenuClickHandler = ()=> {
 			isHamburgerOpen = false;
 			event.target.parentElement.classList.add('active');
 		}
-	}); 	
+	});
+	
 }
+
+
 
 /*-----Slider phones background image on/off-----*/
 let isVisibleVertPhone = false;
@@ -247,13 +247,6 @@ let previousClickedImage = '';
 let clickedImage = '';
 let borderBlock = '<span class="image_border"></span>';
 
-const PORTFOLIO_IMAGES = ['<span class="picture picture-1"></span>', '<span class="picture picture-2"></span>',
-							'<span class="picture picture-3"></span>', '<span class="picture picture-4"></span>',
-							'<span class="picture picture-5"></span>', '<span class="picture picture-6"></span>',
-							'<span class="picture picture-7"></span>', '<span class="picture picture-8"></span>',
-							'<span class="picture picture-9"></span>', '<span class="picture picture-10"></span>',
-							'<span class="picture picture-11"></span>', '<span class="picture picture-12"></span>'];
-
 const addPortfolioTagsHandler = ()=> {
 	PORTFOLIO_TAGS.addEventListener('click', (event) => {
 		if(event.target.classList.contains('tag')) {
@@ -264,17 +257,20 @@ const addPortfolioTagsHandler = ()=> {
 	});
 }
 
+
 const mixPortfolioImages = ()=> {
-	var PORTFOLIO_IMAGES_COPY = [];
-	let newInnerHtml = '';
-	for(var i=0; i<PORTFOLIO_IMAGES.length; i++) {
-		PORTFOLIO_IMAGES_COPY.push(PORTFOLIO_IMAGES[i]); }
-	for(var i=0; i< PORTFOLIO_IMAGES.length; i++) {
-		var randomNumber = Math.floor(Math.random() * PORTFOLIO_IMAGES_COPY.length);
-		var randomImage = PORTFOLIO_IMAGES_COPY[randomNumber];
-		PORTFOLIO_IMAGES_COPY.splice(randomNumber,1);
-		newInnerHtml = newInnerHtml + randomImage; }
-	document.getElementById('portfolio__images').innerHTML = newInnerHtml;
+	var portfolio_images_collection = document.querySelectorAll('.picture');
+	var PORTFOLIO_IMAGES = [];
+	for(var i=0; i<portfolio_images_collection .length; i++) {
+		PORTFOLIO_IMAGES.push(portfolio_images_collection[i]); 
+	}
+	document.getElementById('portfolio__images').innerHTML = '';
+	for(var i=0; i< portfolio_images_collection.length; i++) {
+		var randomNumber = Math.floor(Math.random() * PORTFOLIO_IMAGES.length);
+		var randomImage = PORTFOLIO_IMAGES[randomNumber];
+		PORTFOLIO_IMAGES.splice(randomNumber,1);
+		document.getElementById('portfolio__images').append(randomImage);
+	}
 }
 
 /*-----Portfolio images handler-----*/
