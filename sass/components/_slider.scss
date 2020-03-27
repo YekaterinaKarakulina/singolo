@@ -7,7 +7,7 @@
 .slide2 {
     height: calc(100vw * 0.58);
     max-height: 594px;
-    border-bottom: 6px solid $color-slide2;
+    border-bottom: calc(100vw * 0.006) solid $color-slide2;
 }
 
 .phones__slide2 {
@@ -19,7 +19,7 @@
     height: calc(100vw * 0.58);
     max-height: 594px;
     background-color: $color-additional; 
-    border-bottom: 6px solid $color-additional-light;
+    border-bottom: calc(100vw * 0.006) solid $color-additional-light;
 }
 
 .current,

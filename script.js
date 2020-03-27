@@ -17,10 +17,13 @@ window.onload = function() {
 			})
 		}
 	})
-
+//Handler();
 	//Hamburger menu
 	addHamburgerHandler();
 	
+
+	
+
 	//Header navigation
 	addNavigationMenuClickHandler();
 
@@ -56,7 +59,7 @@ const addNavigationMenuClickHandler = ()=> {
 		const links = document.querySelectorAll('#navigation a');
 
 		divs.forEach((element) => {
-			if((element.offsetTop - 95) <= currentPos && (element.offsetTop + element.offsetHeight - 95) > currentPos) {
+			if((element.offsetTop - 97) <= currentPos && (element.offsetTop + element.offsetHeight - 97) > currentPos) {
 				links.forEach((link) => {
 					link.classList.remove('active');
 					if((element.firstElementChild.getAttribute('id')) === link.getAttribute('href').substring(1)) {
@@ -66,6 +69,18 @@ const addNavigationMenuClickHandler = ()=> {
 			}
 		})
 	});
+
+	const navigation = document.querySelector('.hamburger__navigation');
+	
+	navigation.addEventListener('click', (event) => {
+		if(event.target.parentElement.classList.contains('nav-item')) {
+			navigation.querySelectorAll('li').forEach(element => element.classList.remove('active'));
+			document.querySelector('.hamburger-container').classList.add('hidden');
+			document.querySelector('.hamburger').classList.remove('hamburger_open');
+			isHamburgerOpen = false;
+			event.target.parentElement.classList.add('active');
+		}
+	}); 	
 }
 
 /*-----Slider phones background image on/off-----*/

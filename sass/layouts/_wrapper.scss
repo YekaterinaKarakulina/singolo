@@ -52,7 +52,11 @@
     position: relative;
     top: 95px;
     @include media-laptop {
+        border-bottom: 7.6px solid $color-primary-light;
         top: 71px;
+    }
+    @include media-tablet {
+        border-bottom: none;
     }
 }
 
@@ -80,6 +84,9 @@
     @include media-laptop {
         top: 71px;
     }
+    @include media-tablet {
+        border-bottom: none;
+    }
 }
 
 
@@ -97,4 +104,7 @@
 .yakor {
     position: absolute;
     top: -95px;
+    @include media-laptop {
+        top: -71px;
+    }
 }
