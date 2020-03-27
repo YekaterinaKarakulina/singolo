@@ -74,6 +74,7 @@ const addNavigationMenuClickHandler = ()=> {
 			navigation.querySelectorAll('li').forEach(element => element.classList.remove('active'));
 			document.querySelector('.hamburger-container').classList.add('hidden');
 			document.querySelector('.hamburger').classList.remove('hamburger_open');
+			document.querySelector('.logo').classList.remove('center');
 			isHamburgerOpen = false;
 			event.target.parentElement.classList.add('active');
 		}
