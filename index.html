@@ -5,7 +5,6 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Singolo</title>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
         <link rel="stylesheet" href="./sass/fonts.css">
         <link rel="stylesheet" href="./sass/style.css">
     </head>
@@ -13,6 +12,7 @@
     <body>
         <header class="header" id="header">
             <div class="wrapper header__wrapper">
+                <span class="header__hamburger hamburger"><span class="hamburger__line"></span></span>
                 <div class="logo">
                     <h1 class="logo__title">Singolo</h1>
                 </div>
@@ -25,6 +25,19 @@
                         <li class="nav-item"><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+            </div>
+            <div class="hamburger-container hidden">
+                <div class="hamburger__menu">
+                    <nav class="hamburger__navigation">
+                        <ul class="navigation" id="navigation">
+                            <li class="nav-item"><a class="active" href="#home">Home</a></li>
+                            <li class="nav-item"><a href="#services">Services</a></li>
+                            <li class="nav-item"><a href="#portfolio">Portfolio</a></li>
+                            <li class="nav-item"><a href="#about-us">About</a></li>
+                            <li class="nav-item"><a href="#contact">Contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </header>
 
@@ -48,14 +61,12 @@
                             </div>
                         </div>
                         <div class="slide slide2">
-                            <img src="./assets/img/slider/slide2.png" alt="slide2">
+                            <img class="phones__slide2" src="./assets/img/slider/slide2.png" alt="slide2">
                         </div>
                     </div>
                 </div>
-                <div class="control left">
+                <div class="control">
                     <div class="arrow left"></div>
-                </div>
-                <div class="control right">
                     <div class="arrow right"></div>
                 </div> 
             </div>
@@ -220,6 +231,7 @@
                                 <input class="input input__subject" type="text" name="subject" id="subject" placeholder="Subject" autocomplete="off" maxlength="70">
                                 <textarea class="input input__description" name="description" id="description" style="resize: none;" id="description" placeholder="Describe your project in detail" maxlength="1000"></textarea>
                             </fieldset>
+                            <button class="submit-button" id="submit-button">Submit</button>
                         </div>
                         <div class="second-col">
                             <div class="contact-information">
@@ -244,7 +256,6 @@
                                     </div>
                                 </div>
                             </div>
-                            <button class="submit-button" id="submit-button">Submit</button>
                         </div>
                     </div>
                     <div class="message-block hidden" id="message-block">
@@ -258,7 +269,7 @@
                 </form>
             </div>
         </section>
-
+    
         <footer class="footer">
             <div class="wrapper footer__wrapper">
                 <div class="copyright">© Copyright 2013</div>

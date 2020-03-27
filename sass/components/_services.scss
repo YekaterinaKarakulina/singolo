@@ -2,18 +2,42 @@
     color: $color-dark;
     @include font(3.0rem, 3.6rem, 900);
     text-align: left;  
-    padding: 61px 0px 0px 40px;
+    padding: 61px 40px 0px 40px;
+    @include media-laptop {
+        padding-top: 5.1%;
+    }
+    @include media-tablet {
+        padding-top: 6.8%;
+    }
 }
 
 .services__content {
     color: $color-dark-lighten;
     @include font(1.8rem, 3.0rem, 300);
     text-align: left; 
-    padding: 0px 36px 0px 40px;
+    margin: 18px 0;
+    padding: 0px 44px 0px 40px;
+    @include media-laptop {
+        padding: 0px 40px 0px 41px;
+    }
+    @include media-tablet {
+        padding: 0px 29px 0px 32px;
+    }
 }
 
 .item__content {
-    padding: 0 17px;
+    width: 220px;
+    margin: 0 20px 20px;
+    @include media-laptop {
+        margin-right: 53px;
+        margin-bottom: 39px;
+    }
+    @include media-tablet {
+        margin-right: 0px;
+        margin-bottom: 15px;
+        width: 100%;
+        max-width: 220px;
+    }
 }
 
 .item__title {
@@ -22,7 +46,7 @@
     @include font(1.8rem, 1.8rem, 900);
     text-align: left;
     margin: 0px;
-    padding-bottom: 8px;
+    padding-bottom: 7px;
 }
 
 .item__description {
@@ -30,7 +54,10 @@
     color: $color-dark-lighten;
     @include font(1.2rem, 2.2rem);
     text-align: justify;
+    height: 77px;
     overflow: hidden;
     margin: 0;
-    padding-bottom: 29px;
+    @include media-tablet {
+        margin-bottom: 0;
+    }
 }

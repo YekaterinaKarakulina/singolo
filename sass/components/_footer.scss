@@ -4,10 +4,17 @@
     font-size: 12px;
     font-weight: 400;
     position: absolute;
-    margin: 32px 40px;
+    margin: 30px 40px;
+    @include media-tablet {
+        display: none;
+    }
 }
 
 .footer__social-media {
     display: inline-block;
-    margin: 21px 0px 0px 824px;
+    float: right;
+    margin: 21px 40px 0px;
+    @include media-tablet {
+        margin: 21px calc(50% - 78px);
+    }
 }

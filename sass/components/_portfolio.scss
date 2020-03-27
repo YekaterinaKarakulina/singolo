@@ -1,86 +1,124 @@
 .portfolio__title {
     color: $color-dark;
     @include font(3.0rem, 3.6rem, 900);
-    padding: 63px 0px 0px 41px;
-    letter-spacing: 0.1px;
-    text-align: left;
+        padding: 63px 40px 0px;
+        letter-spacing: 0.1px;
+        text-align: left;
+    @include media-tablet {
+        padding: 46px 30px 0;
+    }
 }
 
 .portfolio__content {
     color: $color-dark-lighten;
     @include font(1.8rem, 3.0rem, 300);
-    letter-spacing: -0.22px;
-    text-align: left;
-    margin: 0;
-    padding: 16px 0px 0px 40px;
+        letter-spacing: -0.22px;
+        text-align: left;
+        margin: 0;
+        padding: 16px 40px 9px;
+    @include media-tablet {
+        padding-bottom: 7px;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    @include media-mobile {
+        padding-bottom: 5px;
+    }
 }
 
 .portfolio__tags-list {
-    padding: 10px 0px 10px 40px;
+   margin: 0 40px;
+   @include media-tablet {
+       margin: 0 30px;
+   }
 }
 
 .picture {
     width: 220px;
     height: 187px;
     cursor: pointer;
+    @include media-laptop {
+        width: 216px;
+        height: 183.5px;
+    }
+    @include media-tablet {
+        width: 151px;
+        height: 128px;
+    }
+    @include media-mobile {
+        width: 128px;
+        height: 108px;
+    }
     &.picture-1 {
         background-image: url('../assets/img/portfolio/1.png');
-        background-position: -8px -11px;
+        background-position: 42% 21%;
+        background-size: 108.2% 127.3%;
     }
     
     &.picture-2 {
         background-image: url('../assets/img/portfolio/2.png');
-        background-position: -82px -43px;
+        background-position: 57% 49%;
+        background-size: 165.2% 147.3%
     }
     
     &.picture-3 {
         background-image: url('../assets/img/portfolio/3.png');
-        background-position: -11px -1px;
+        background-position: 37% 0%;
+        background-size: 113.5% 163.3%;
     }
     
     &.picture-4 {
         background-image: url('../assets/img/portfolio/4.png');
-        background-position: -24px -2px;
+        background-position: 57% 21%;
+        background-size: 118.5% 105.3%;
     }
     
     &.picture-5 {
         background-image: url('../assets/img/portfolio/5.png');
-        background-position: -10px -16px;
+        background-position: 44% 18%;
+        background-size: 110.5% 147.3%;
     }
     
     &.picture-6 {
         background-image: url('../assets/img/portfolio/6.png');
-        background-position: -16px -4px;
+        background-position: 45% 53%;
+        background-size: 117.5% 104.3%;
     }
     
     &.picture-7 {
         background-image: url('../assets/img/portfolio/7.png');
-        background-position: -31px -39px;
+        background-position: 21% 21%;
+        background-size: 169.5% 200.3%;
     }
     
     &.picture-8 {
         background-image: url('../assets/img/portfolio/8.png');
-        background-position: -24px -32px;
+        background-position: 39% 34%;
+        background-size: 126.5% 150.3%;
     }
     
     &.picture-9 {
         background-image: url('../assets/img/portfolio/9.png');
-        background-position: -16px -2px;
+        background-position: 48% 28%;
+        background-size: 115.5% 103.3%;
     }
     
     &.picture-10 {
         background-image: url('../assets/img/portfolio/10.png');
-        background-position: -141px -113px;
+        background-position: 55% 23.5%;
+        background-size: 215.5% 355.3%;
     }
     
     &.picture-11 {
         background-image: url('../assets/img/portfolio/11.png');
-        background-position: -144px -175px;
+        background-position: 74% 77%;
+        background-size: 188.5% 221.3%;
     }
     
     &.picture-12 {
         background-image: url('../assets/img/portfolio/12.png');
-        background-position: -36px -60px;
+        background-position: 47% 25%;
+        background-size: 134.5% 228.3%;
     }
 }
 
@@ -90,7 +128,17 @@
     border: 5px solid  $color-additional;
     width: 210px;
     height: 177px;
+    @include media-laptop {
+        width: 206px;
+        height: 173.5px;
+    }
+    @include media-tablet {
+        width: 141px;
+        height: 118px;
+    }
+    @include media-mobile {
+        width: 118px;
+        height: 98px;
+    }
     background: transparent;
 }
-
-
