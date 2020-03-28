@@ -82,8 +82,6 @@ const addNavigationMenuClickHandler = ()=> {
 	
 }
 
-
-
 /*-----Slider phones background image on/off-----*/
 let isVisibleVertPhone = false;
 let isVisibleHorPhone = false;
@@ -97,10 +95,28 @@ const addVerticalPhoneHandler = ()=> {
 		}
 		isVisibleVertPhone = !isVisibleVertPhone;
 	});
+
+	document.getElementById('phone__base__vertical').addEventListener('touchstart', ()=> {
+		if(isVisibleVertPhone) {
+			document.getElementById('phone__background__vertical').classList.remove('hidden');
+		} else {
+			document.getElementById('phone__background__vertical').classList.add('hidden');
+		}
+		isVisibleVertPhone = !isVisibleVertPhone;
+	});
 }
 
 const addHorizontalPhoneHandler = ()=> {
 	document.getElementById('phone__base__horizontal').addEventListener('click', ()=> {
+		if(isVisibleHorPhone) {
+			document.getElementById('phone__background__horizontal').classList.remove('hidden');
+		} else {
+			document.getElementById('phone__background__horizontal').classList.add('hidden');
+		}
+		isVisibleHorPhone = !isVisibleHorPhone;
+	});
+
+	document.getElementById('phone__base__horizontal').addEventListener('touchstart', ()=> {
 		if(isVisibleHorPhone) {
 			document.getElementById('phone__background__horizontal').classList.remove('hidden');
 		} else {
