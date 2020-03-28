@@ -21,22 +21,18 @@
 .slider__wrapper {
     position: relative;  
     overflow: hidden;
-    top: 95px; 
+    top: 94px; 
     max-height: 600px;
     @include media-tablet {
         top: 71px;
     }
 }
 
-
-
-
-
 .services__wrapper {
     background-color: $color-light-darken;
     border-bottom: 6px solid $color-light;
     position: relative;
-    top: 95px; 
+    top: 94px; 
     @include media-laptop {
         border-bottom: none;
     }
@@ -45,12 +41,11 @@
     }
 }
 
-
 .portfolio__wrapper {
     background-color: $color-primary;
     border-bottom: 6px solid $color-primary-light;
     position: relative;
-    top: 95px;
+    top: 94px;
     @include media-laptop {
         border-bottom: 7.6px solid $color-primary-light;
         top: 71px;
@@ -60,14 +55,11 @@
     }
 }
 
-
-
-
 .about-us__wrapper {
     background-color: $color-light-darken;
     border-bottom: 6px solid $color-light;
     position: relative;
-    top: 95px;
+    top: 94px;
     @include media-laptop {
         border-bottom: none;
     }
@@ -80,7 +72,7 @@
     background-color: $color-additional;
     border-bottom: 6px solid $color-additional-light;
     position: relative;
-    top: 95px;
+    top: 94px;
     @include media-laptop {
         top: 71px;
     }
@@ -89,13 +81,11 @@
     }
 }
 
-
 .footer__wrapper {
     height: 76px;
-   // height: calc(100vw * 0.1);
     background-color: $color-primary;
     position: relative;
-    top: 95px;
+    top: 94px;
     @include media-laptop {
         top: 71px;
     }
@@ -103,7 +93,7 @@
 
 .yakor {
     position: absolute;
-    top: -95px;
+    top: -94px;
     @include media-laptop {
         top: -71px;
     }

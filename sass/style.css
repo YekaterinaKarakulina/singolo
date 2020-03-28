@@ -1558,7 +1558,7 @@ textarea::placeholder {
 .slider__wrapper {
   position: relative;
   overflow: hidden;
-  top: 95px;
+  top: 94px;
   max-height: 600px;
 }
 @media (max-width: 767px) {
@@ -1571,7 +1571,7 @@ textarea::placeholder {
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
   position: relative;
-  top: 95px;
+  top: 94px;
 }
 @media (max-width: 1019px) {
   .services__wrapper {
@@ -1588,7 +1588,7 @@ textarea::placeholder {
   background-color: #2d303a;
   border-bottom: 6px solid #323746;
   position: relative;
-  top: 95px;
+  top: 94px;
 }
 @media (max-width: 1019px) {
   .portfolio__wrapper {
@@ -1606,7 +1606,7 @@ textarea::placeholder {
   background-color: #f2f2f2;
   border-bottom: 6px solid #ffffff;
   position: relative;
-  top: 95px;
+  top: 94px;
 }
 @media (max-width: 1019px) {
   .about-us__wrapper {
@@ -1623,7 +1623,7 @@ textarea::placeholder {
   background-color: #f06c64;
   border-bottom: 6px solid #ea676b;
   position: relative;
-  top: 95px;
+  top: 94px;
 }
 @media (max-width: 1019px) {
   .get-a-quote__wrapper {
@@ -1640,7 +1640,7 @@ textarea::placeholder {
   height: 76px;
   background-color: #2d303a;
   position: relative;
-  top: 95px;
+  top: 94px;
 }
 @media (max-width: 1019px) {
   .footer__wrapper {
@@ -1650,7 +1650,7 @@ textarea::placeholder {
 
 .yakor {
   position: absolute;
-  top: -95px;
+  top: -94px;
 }
 @media (max-width: 1019px) {
   .yakor {
