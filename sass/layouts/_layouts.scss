@@ -28,7 +28,7 @@
     margin: 18px 40px 68px;
     @include media-laptop {
         grid-template: repeat(4, 183.5px)/ repeat(3, 216px);
-        margin-left: calc(50% - 350px);
+        margin-left: calc(50% - 344px);
         max-height: 895px;
         margin-top: 28px;
    }
@@ -38,8 +38,7 @@
         margin: 25px 0 37px;
         margin-left: calc(50% - 160px);
         max-height: 560px;
-        grid-gap: 13px;
-
+        grid-gap: 10px;
    }
 
    @include media-mobile {

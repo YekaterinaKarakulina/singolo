@@ -52,6 +52,7 @@
     }
     @include media-tablet {
         border-bottom: none;
+        padding-bottom: 1px;
     }
 }
 
@@ -93,7 +94,7 @@
 
 .yakor {
     position: absolute;
-    top: -94px;
+    top: -93px;
     @include media-laptop {
         top: -71px;
     }
